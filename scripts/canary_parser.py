@@ -35,7 +35,7 @@ def split_changes(body: str):
 
 def fetch_commit_details(repo: str, tag: str):
     """Fetch commit from release tag and parse its message into title/body."""
-    url = f"{GITHUB_API}/{repo}/commits/{tag}"
+    url = f"{GITHUB_API}/xenia-canary/xenia-canary/commits/{tag}"
     try:
         commit_data = gh_get(url)
         full_msg = commit_data["commit"]["message"]
