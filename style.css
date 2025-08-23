@@ -285,6 +285,17 @@ main {
   font-weight: 600;
   margin-bottom: 0.3rem;
 }
+.release-title a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.release-title a:hover {
+  color: var(--button-hover);
+  text-decoration: underline;
+}
 .release-changes {
   font-size: 0.95rem;
   color: var(--text-secondary);

@@ -54,7 +54,7 @@ function renderReleases(list) {
         card.className = "release-card";
 
         card.innerHTML = `
-      <div class="release-title">${rel.changelog.title || rel.tag_name}</div>
+      <div class="release-title"><a href="${rel.url}">${rel.changelog.title || rel.tag_name}</a></div>
       ${rel.changelog.changes
                 ? `<div class="release-changes">${rel.changelog.changes}</div>`
                 : ""
