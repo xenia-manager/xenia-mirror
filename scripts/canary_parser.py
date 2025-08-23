@@ -25,7 +25,6 @@ def gh_get(url):
         debug(f"Response status: {resp.status}, length: {len(text)} bytes")
         return json.loads(text)
 
-
 def split_changes(body: str):
     if not body:
         return {"title": "", "changes": ""}
@@ -33,6 +32,20 @@ def split_changes(body: str):
     title = parts[0].strip()
     changes = parts[1].strip() if len(parts) > 1 else ""
     return {"title": title, "changes": changes}
+
+def fetch_commit_details(repo: str, tag: str):
+    """Fetch commit from release tag and parse its message into title/body."""
+    url = f"{GITHUB_API}/{repo}/commits/{tag}"
+    try:
+        commit_data = gh_get(url)
+        full_msg = commit_data["commit"]["message"]
+        lines = full_msg.splitlines()
+        title = lines[0]
+        body = "\n".join(lines[1:]).strip()
+        return {"title": title, "changes": body}
+    except Exception as e:
+        debug(f"Failed to fetch commit for {repo}@{tag}: {e}")
+        return {"title": "", "changes": ""}
 
 def fetch_releases(repo: str):
     releases = []
@@ -52,7 +65,7 @@ def fetch_releases(repo: str):
         page += 1
     return releases
 
-def process_releases(raw_releases):
+def process_releases(raw_releases, repo: str):
     results = []
     for rel in raw_releases:
         tag = rel.get("tag_name", "")
@@ -67,14 +80,20 @@ def process_releases(raw_releases):
         if not assets:
             debug(f"Skipping release {tag} because it has no matching assets")
             continue
+
         body_split = split_changes(rel.get("body") or "")
+        title, changes = body_split["title"], body_split["changes"]
+
+        # --- NEW LOGIC: Fallback to commit if body missing ---
+        if not title and not changes:
+            debug(f"No changelog for {tag}, fetching commit info from repo")
+            commit_info = fetch_commit_details(repo, tag)
+            title, changes = commit_info["title"], commit_info["changes"]
+
         results.append({
             "tag_name": tag,
             "published_at": rel.get("published_at"),
-            "changelog": {
-                "title": body_split["title"],
-                "changes": body_split["changes"]
-            },
+            "changelog": {"title": title, "changes": changes},
             "assets": assets,
         })
         debug(f"Prepared release {tag} with {len(assets)} assets")
@@ -89,7 +108,7 @@ if not os.path.exists(output_path):
     all_releases = []
     for repo in ["xenia-canary/xenia-canary-releases", "xenia-canary/xenia-canary"]:
         raw = fetch_releases(repo)
-        processed = process_releases(raw)
+        processed = process_releases(raw, repo)
         debug(f"Adding {len(processed)} releases from {repo}")
         all_releases.extend(processed)
 else:
@@ -117,7 +136,7 @@ else:
                 debug(f"Reached existing tag {tag}, stopping fetch for newer releases.")
                 stop_fetch = True
                 break
-            processed = process_releases([rel])
+            processed = process_releases([rel], "xenia-canary/xenia-canary-releases")
             if processed:
                 all_releases = processed + all_releases  # prepend newest first
                 new_count += 1
