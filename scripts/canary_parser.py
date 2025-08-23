@@ -84,7 +84,7 @@ def process_releases(raw_releases, repo: str):
         body_split = split_changes(rel.get("body") or "")
         title, changes = body_split["title"], body_split["changes"]
 
-        # --- NEW LOGIC: Fallback to commit if body missing ---
+        # --- Fallback to commit if body missing ---
         if not title and not changes:
             debug(f"No changelog for {tag}, fetching commit info from repo")
             commit_info = fetch_commit_details(repo, tag)
@@ -93,6 +93,7 @@ def process_releases(raw_releases, repo: str):
         results.append({
             "tag_name": tag,
             "published_at": rel.get("published_at"),
+            "url": rel.get("html_url"),
             "changelog": {"title": title, "changes": changes},
             "assets": assets,
         })
