@@ -69,7 +69,7 @@ function renderReleases(list) {
       </div>
       <div class="download-links">
         ${rel.assets.map(asset => {
-                let label = "📦 Download";
+                let label = "🪟 Windows";
                 const lower = asset.name.toLowerCase();
                 if (lower.includes("windows")) {
                     label = "🪟 Windows";
