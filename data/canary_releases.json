@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "4d1380d",
+    "published_at": "2025-09-13T17:07:15Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/4d1380d",
+    "changelog": {
+      "title": "Fix hotkey processing locking issue.",
+      "changes": "Rather than manually release the lock inside the loop, which breaks RAII\nand introduces undefined behavior, we separate the controller state gathering\noperation from the rumble hotkey processing loop. The lock lifecycle\nis now automatically managed by scope.\n\nOn a side note, with multiple controllers connected this would probably\nhave become clear that it's broken sooner but I guess that's not a very\ncommon use case."
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/4d1380d/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/4d1380d/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "7650730",
     "published_at": "2025-08-22T13:40:58Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/7650730",
@@ -53,6 +72,25 @@
       {
         "name": "xenia_canary_windows.zip",
         "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/a9fb32a/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "3ba63e0",
+    "published_at": "2025-08-15T20:58:01Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/3ba63e0",
+    "changelog": {
+      "title": "[XAM] Fixed crash due to missing XELOGW arguments in user tracker",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/3ba63e0/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/3ba63e0/xenia_canary_windows.zip"
       }
     ]
   },
@@ -205,6 +243,135 @@
     ]
   },
   {
+    "tag_name": "6941b69",
+    "published_at": "2025-08-10T12:32:28Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/6941b69",
+    "changelog": {
+      "title": "[Base] Remove unneeded if",
+      "changes": "C++20 is required to build and this didn't work for Windows since it didn't account for _MSVC_LANG."
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/6941b69/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/6941b69/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "64b7695",
+    "published_at": "2025-08-08T21:04:35Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/64b7695",
+    "changelog": {
+      "title": "[Kernel] - restrict kXNotificationLiveConnectionChanged to startup",
+      "changes": "- allow for dashboard to show achievements and themes again."
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/64b7695/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/64b7695/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "06456c2",
+    "published_at": "2025-08-08T20:25:45Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/06456c2",
+    "changelog": {
+      "title": "[Kernel] Prevent real XAM from initialization while loading dashboard",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/06456c2/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/06456c2/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "04adfff",
+    "published_at": "2025-08-08T19:18:01Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/04adfff",
+    "changelog": {
+      "title": "[CI] Fix releases (again)",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/04adfff/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/04adfff/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "3fc5301",
+    "published_at": "2025-08-08T16:22:12Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/3fc5301",
+    "changelog": {
+      "title": "[CI] Fix releases (again)",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/3fc5301/xenia_canary_linux.tar.xz"
+      }
+    ]
+  },
+  {
+    "tag_name": "10f2b5e",
+    "published_at": "2025-08-04T03:11:30Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/10f2b5e",
+    "changelog": {
+      "title": "Imgui stuff",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/10f2b5e/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/10f2b5e/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "37e3fe9",
+    "published_at": "2025-08-03T20:45:20Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/37e3fe9",
+    "changelog": {
+      "title": "[D3D12] Default to RTV on Intel ARC GPUs",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/37e3fe9/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/37e3fe9/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "ada971a",
     "published_at": "2025-08-03T18:59:07Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/ada971a",
@@ -220,6 +387,82 @@
       {
         "name": "xenia_canary_windows.zip",
         "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/ada971a/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "70364e7",
+    "published_at": "2025-08-03T17:48:12Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/70364e7",
+    "changelog": {
+      "title": "[XAM] Added option to remove titles with 0 achievements unlocked",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/70364e7/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/70364e7/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "4e8e789",
+    "published_at": "2025-08-01T06:24:08Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/4e8e789",
+    "changelog": {
+      "title": "[XAM/UI] - Stubbed XamShowSigninUIEx and XamShowNuiSigninUI",
+      "changes": "- Add XTT file header\n- partially implemented XamShowSigninUIEx & XamShowNuiSigninUI\n- add flags for XamShowCreateProfileUI, exXamShowSigninUI, and XamUserLogon\n- Define sign in states\n- Add undefined params"
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/4e8e789/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/4e8e789/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "43d206d",
+    "published_at": "2025-07-29T19:22:07Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/43d206d",
+    "changelog": {
+      "title": "[premake] More cleanup",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/43d206d/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/43d206d/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "3b3c41a",
+    "published_at": "2025-07-29T09:07:10Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/3b3c41a",
+    "changelog": {
+      "title": "[tools/build/premake.py] Formatting",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/3b3c41a/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/3b3c41a/xenia_canary_windows.zip"
       }
     ]
   },
@@ -254,6 +497,40 @@
       {
         "name": "xenia_canary_windows.zip",
         "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/ff29cea/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "03c0e70",
+    "published_at": "2025-07-29T00:43:43Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/03c0e70",
+    "changelog": {
+      "title": "[premake] Remove unneeded defines",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/03c0e70/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/03c0e70/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "6b384df",
+    "published_at": "2025-07-29T00:06:52Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/6b384df",
+    "changelog": {
+      "title": "[xb] Fix xb.bat",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/6b384df/xenia_canary_windows.zip"
       }
     ]
   },
@@ -303,6 +580,25 @@
       {
         "name": "xenia_canary_windows.zip",
         "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/fe0e184/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "4702bfb",
+    "published_at": "2025-07-27T17:15:43Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/4702bfb",
+    "changelog": {
+      "title": "[XBDM] Cleanup Stubs",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/4702bfb/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/4702bfb/xenia_canary_windows.zip"
       }
     ]
   },
@@ -497,6 +793,44 @@
     ]
   },
   {
+    "tag_name": "01d46c2",
+    "published_at": "2025-07-21T06:29:29Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/01d46c2",
+    "changelog": {
+      "title": "[XAM] Cleanup XamUserAreUsersFriends",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/01d46c2/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/01d46c2/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "5e4a04f",
+    "published_at": "2025-07-19T21:59:57Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/5e4a04f",
+    "changelog": {
+      "title": "[CI] Remove Clang 19 build",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/5e4a04f/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/5e4a04f/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "6314388",
     "published_at": "2025-07-19T18:54:30Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/6314388",
@@ -566,6 +900,101 @@
     ]
   },
   {
+    "tag_name": "3ab5ba5",
+    "published_at": "2025-07-10T09:51:01Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/3ab5ba5",
+    "changelog": {
+      "title": "Allow premake5 --cc argument to be optional",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux_clang19.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/3ab5ba5/xenia_canary_linux_clang19.tar.gz"
+      },
+      {
+        "name": "xenia_canary_linux_clang20.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/3ab5ba5/xenia_canary_linux_clang20.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/3ab5ba5/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "7835f92",
+    "published_at": "2025-07-08T08:04:49Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/7835f92",
+    "changelog": {
+      "title": "[CI] Fix release creation",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux_clang19.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/7835f92/xenia_canary_linux_clang19.tar.gz"
+      },
+      {
+        "name": "xenia_canary_linux_clang20.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/7835f92/xenia_canary_linux_clang20.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/7835f92/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "0f804c3",
+    "published_at": "2025-07-07T13:59:21Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/0f804c3",
+    "changelog": {
+      "title": "[SMC] - add structs and enum for poweron and standby messages",
+      "changes": "- add structs for poweron and standby messages\n- add enum for poweron and standby messages\n- add enum for HalReturnToFirmware and log"
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/0f804c3/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "0aeac84",
+    "published_at": "2025-07-07T11:46:12Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/0aeac84",
+    "changelog": {
+      "title": "Fix building with Clang 20",
+      "changes": "date: 3.0.4\ntomlplusplus: Latest master as of writing since there's no stable release with the build fixes."
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/0aeac84/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "20106f8",
+    "published_at": "2025-07-07T07:55:50Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/20106f8",
+    "changelog": {
+      "title": "[xb] Fix typo",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/20106f8/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/20106f8/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "f3de3ad",
     "published_at": "2025-07-07T03:25:36Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/f3de3ad",
@@ -581,6 +1010,21 @@
       {
         "name": "xenia_canary_windows.zip",
         "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/f3de3ad/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "54055a2",
+    "published_at": "2025-07-07T02:23:37Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/54055a2",
+    "changelog": {
+      "title": "[xb] Remove redundant Python path",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/54055a2/xenia_canary_windows.zip"
       }
     ]
   },
@@ -661,6 +1105,25 @@
     ]
   },
   {
+    "tag_name": "20d3ac4",
+    "published_at": "2025-06-22T16:33:10Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/20d3ac4",
+    "changelog": {
+      "title": "[XAM/USER] - Implement Multiple Functions",
+      "changes": "- Implement XamUserGetCachedUserFlags, XamIsChildAccountSignedIn, XamUserGetOnlineLanguageFromXUID and XamUserGetOnlineCountryFromXUID\n- add IsParentalControlled()"
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/20d3ac4/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/20d3ac4/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "fd1abfe",
     "published_at": "2025-06-20T22:44:02Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/fd1abfe",
@@ -714,6 +1177,63 @@
     ]
   },
   {
+    "tag_name": "1d7973a",
+    "published_at": "2025-06-10T15:21:43Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/1d7973a",
+    "changelog": {
+      "title": "Fixed git checkout to canary-experimental instead of canary_experimental (#644)",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/1d7973a/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/1d7973a/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "422517c",
+    "published_at": "2025-06-06T17:42:38Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/422517c",
+    "changelog": {
+      "title": "[XAM] Only show license_mask instructions for XBLA game unlock offer ids",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/422517c/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/422517c/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "15008cc",
+    "published_at": "2025-06-02T07:58:41Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/15008cc",
+    "changelog": {
+      "title": "[CI] Check binary size",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/15008cc/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/15008cc/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "b864149",
     "published_at": "2025-05-31T10:17:01Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/b864149",
@@ -729,6 +1249,44 @@
       {
         "name": "xenia_canary_windows.zip",
         "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/b864149/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "50492a9",
+    "published_at": "2025-05-31T08:22:42Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/50492a9",
+    "changelog": {
+      "title": "[Misc] Moved pe_image to base from 3pp and cut unnecessary parts",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/50492a9/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/50492a9/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "31ce3e0",
+    "published_at": "2025-05-30T21:57:12Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/31ce3e0",
+    "changelog": {
+      "title": "[XAM] Added overlap to XamUserReadProfileSettings",
+      "changes": "- Removed delay on CompleteOverlappedDeferredEx"
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/31ce3e0/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/31ce3e0/xenia_canary_windows.zip"
       }
     ]
   },
@@ -786,6 +1344,25 @@
       {
         "name": "xenia_canary_windows.zip",
         "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/e601b5a/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "270e88a",
+    "published_at": "2025-05-27T20:44:30Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/270e88a",
+    "changelog": {
+      "title": "[Emulator] Removed marking extracted games as booted from disc",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/270e88a/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/270e88a/xenia_canary_windows.zip"
       }
     ]
   },
@@ -885,6 +1462,21 @@
     ]
   },
   {
+    "tag_name": "63c2d94",
+    "published_at": "2025-05-20T18:55:39Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/63c2d94",
+    "changelog": {
+      "title": "Implement LaunchFileExplorer the same as LaunchWebBrowser.",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/63c2d94/xenia_canary_linux.tar.gz"
+      }
+    ]
+  },
+  {
     "tag_name": "b43cb2e",
     "published_at": "2025-05-18T21:33:38Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/b43cb2e",
@@ -919,6 +1511,25 @@
       {
         "name": "xenia_canary_windows.zip",
         "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/d211130/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "5e90193",
+    "published_at": "2025-05-17T16:10:17Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/5e90193",
+    "changelog": {
+      "title": "[Misc] Removed dead link",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/5e90193/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/5e90193/xenia_canary_windows.zip"
       }
     ]
   },
@@ -995,6 +1606,25 @@
       {
         "name": "xenia_canary_windows.zip",
         "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/e85c239/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "2c8acf7",
+    "published_at": "2025-05-10T08:00:16Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/2c8acf7",
+    "changelog": {
+      "title": "[CI] use gzip in tar compression",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/2c8acf7/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/2c8acf7/xenia_canary_windows.zip"
       }
     ]
   },
@@ -1113,6 +1743,25 @@
     ]
   },
   {
+    "tag_name": "6b055f1",
+    "published_at": "2025-05-05T17:45:15Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/6b055f1",
+    "changelog": {
+      "title": "[XAM] Assert struct sizes and misc struct adjustments",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/6b055f1/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/6b055f1/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "8cf15a8",
     "published_at": "2025-05-05T10:30:33Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/8cf15a8",
@@ -1128,6 +1777,25 @@
       {
         "name": "xenia_canary_windows.zip",
         "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/8cf15a8/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "3ba31d9",
+    "published_at": "2025-05-04T07:16:02Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/3ba31d9",
+    "changelog": {
+      "title": "Revert \"[D3D12] Changed default resource state based on GPU Validation\"",
+      "changes": "This causes unexpected artifacts on 10 series Nvidia GPUs\n\nThis reverts commit 7566871220009780f8ac4488cef9620f5d97390d."
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/3ba31d9/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/3ba31d9/xenia_canary_windows.zip"
       }
     ]
   },
@@ -1151,6 +1819,25 @@
     ]
   },
   {
+    "tag_name": "2a4ca1a",
+    "published_at": "2025-05-03T19:15:41Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/2a4ca1a",
+    "changelog": {
+      "title": "[VFS] Added fallback if conversion of 1252->UTF8 fails",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/2a4ca1a/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/2a4ca1a/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "9f8fad7",
     "published_at": "2025-04-30T18:25:39Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/9f8fad7",
@@ -1166,6 +1853,25 @@
       {
         "name": "xenia_canary_windows.zip",
         "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/9f8fad7/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "674870d",
+    "published_at": "2025-04-28T21:52:42Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/674870d",
+    "changelog": {
+      "title": "[D3D12] Fixed stability issues (Graphics lost) on AMD GPUs",
+      "changes": "- This includes infamous 6000 series crashes and crashes on newer drivers for 7000 and 9000 series\n\nIssue was caused by returning invalid (negative) address from MaxAs opcode.\n\nCurrently it is unknown if this behaviour is correct and should be checked on console, so slight graphical issues might be present"
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/674870d/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/674870d/xenia_canary_windows.zip"
       }
     ]
   },
@@ -1208,6 +1914,25 @@
     ]
   },
   {
+    "tag_name": "03571ac",
+    "published_at": "2025-04-27T14:51:55Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/03571ac",
+    "changelog": {
+      "title": "[XAM] Added space reporting from \"content\" storage drive.",
+      "changes": "Fixed warning related to uninitialized license"
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/03571ac/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/03571ac/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "b8296a9",
     "published_at": "2025-04-26T16:06:36Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/b8296a9",
@@ -1223,6 +1948,44 @@
       {
         "name": "xenia_canary_windows.zip",
         "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/b8296a9/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "418de9b",
+    "published_at": "2025-04-26T14:03:40Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/418de9b",
+    "changelog": {
+      "title": "[XAM] Increase free space on HDD device",
+      "changes": "Defiance requires at least 5 GB of free space to install."
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/418de9b/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/418de9b/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "7797adf",
+    "published_at": "2025-04-26T09:40:08Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/7797adf",
+    "changelog": {
+      "title": "[UI] Fixed issue with freezing/crashing (BSOD) UI caused by incorrect fence",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/7797adf/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/7797adf/xenia_canary_windows.zip"
       }
     ]
   },
@@ -1284,6 +2047,25 @@
     ]
   },
   {
+    "tag_name": "2941b67",
+    "published_at": "2025-04-23T06:13:47Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/2941b67",
+    "changelog": {
+      "title": "[Kernel] Implemented NtFreeEncryptedMemory",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/2941b67/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/2941b67/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "7566871",
     "published_at": "2025-04-22T17:51:10Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/7566871",
@@ -1299,6 +2081,25 @@
       {
         "name": "xenia_canary_windows.zip",
         "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/7566871/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "179591c",
+    "published_at": "2025-04-20T21:12:12Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/179591c",
+    "changelog": {
+      "title": "[UI] Include null terminator in MessageBoxDialog",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/179591c/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/179591c/xenia_canary_windows.zip"
       }
     ]
   },
@@ -1322,6 +2123,82 @@
     ]
   },
   {
+    "tag_name": "5ba6c2b",
+    "published_at": "2025-04-19T15:13:20Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/5ba6c2b",
+    "changelog": {
+      "title": "[VFS] Improved initial loading time during \"Install Content\"",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/5ba6c2b/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/5ba6c2b/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "56703e5",
+    "published_at": "2025-04-18T20:13:34Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/56703e5",
+    "changelog": {
+      "title": "[UI] Redesigned \"Install Content\" window",
+      "changes": "- Added ID for each ImGui window\n- Added filesystem::CreateFolder function"
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/56703e5/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/56703e5/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "5d5eb03",
+    "published_at": "2025-04-17T11:37:22Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/5d5eb03",
+    "changelog": {
+      "title": "[GPU] Adding Registers from Xenon",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/5d5eb03/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/5d5eb03/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "066391f",
+    "published_at": "2025-04-17T06:00:57Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/066391f",
+    "changelog": {
+      "title": "[main ui] Properly handle XDG format specifications for Linux systems.",
+      "changes": "The issue was stemming from the fact that by default Xenia is running in portable mode, as in use the same root directory as the executable for its datafiles.\n\nThis default is an issue when using this software from a POSIX platform, since a lot of the times the location where the binary resides is not writable by default.\n\nTherefore, force portable mode to be disabled on non Windows platforms."
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/066391f/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/066391f/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "bde7d55",
     "published_at": "2025-04-15T18:55:49Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/bde7d55",
@@ -1337,6 +2214,25 @@
       {
         "name": "xenia_canary_windows.zip",
         "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/bde7d55/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "31d715d",
+    "published_at": "2025-04-15T07:23:30Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/31d715d",
+    "changelog": {
+      "title": "[Premake] Removed unused/unnecessary subprojects.",
+      "changes": "- Testing currently doesn't work\n- VFS Dump is unused. You can use internal function for it\n- Demos are only for fun\n- Trace Dump & Trace Viewer (unsure, but ok)\n\nYou can re-enable them by changing values: enableTests and enableMiscSubprojects in main premake file.\n\nIn the future there should be xb command support to overwrite them"
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/31d715d/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/31d715d/xenia_canary_windows.zip"
       }
     ]
   },
@@ -1379,6 +2275,63 @@
     ]
   },
   {
+    "tag_name": "02c95be",
+    "published_at": "2025-04-13T20:10:42Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/02c95be",
+    "changelog": {
+      "title": "[XAM] Implemented XamShowCreateProfileUI",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/02c95be/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/02c95be/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "1a356f7",
+    "published_at": "2025-04-12T20:35:59Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/1a356f7",
+    "changelog": {
+      "title": "[Kernel] Add option to ignore incompatible title updates with mismatched signatures",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/1a356f7/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/1a356f7/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "47f327e",
+    "published_at": "2025-04-08T17:51:53Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/47f327e",
+    "changelog": {
+      "title": "[Misc] Replaced const with constexpr where possible",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/47f327e/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/47f327e/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "c4f1bf2",
     "published_at": "2025-04-06T16:25:22Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/c4f1bf2",
@@ -1394,6 +2347,44 @@
       {
         "name": "xenia_canary_windows.zip",
         "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/c4f1bf2/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "0771938",
+    "published_at": "2025-04-06T15:49:48Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/0771938",
+    "changelog": {
+      "title": "[Kernel] - Implemented SystemManagementController Class",
+      "changes": "- Added handling (partial or dummy) for SMC actions:\n - QUERY_TEMP_SENSOR, QUERY_TRAY, QUERY_AV_PACK, QUERY_SMC_VERSION, QUERY_IR_ADDRESS, QUERY_TILT_SENSOR\n - SET_FAN_SPEED_CPU, SET_FAN_SPEED_GPU, SET_DVD_TRAY, SET_IR_ADDRESS, SET_POWER_LED, SET_LEDS\n\n- Stub HalOpenCloseODDTray, XamLoaderGetMediaInfo, XamLoaderGetMediaInfoEx\n- Partially Implement HalSendSMCMessage\n- Implement XamLoaderGetDvdTrayState\n- HalOpenCloseODDTray is used by dash and HalSendSMCMessage can be used by custom dashboards"
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/0771938/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/0771938/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "4b24f12",
+    "published_at": "2025-04-01T06:18:16Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/4b24f12",
+    "changelog": {
+      "title": "[XBOXKRNL & XAM] - Video, Hal, And XConfig",
+      "changes": "- Properly implement HalGetCurrentAVPack, and XGetAudioFlags.\n- Return proper flags for AV Component, AV Composite, and VGA from xconfig.\n- Set to HD to proper value.\n- Correct wrong widescreen flag."
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/4b24f12/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/4b24f12/xenia_canary_windows.zip"
       }
     ]
   },
@@ -1474,6 +2465,44 @@
     ]
   },
   {
+    "tag_name": "7479ccc",
+    "published_at": "2025-03-27T17:10:17Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/7479ccc",
+    "changelog": {
+      "title": "[Misc] Fix Some Warnings on Clang Build with Windows + Adding constexpr",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/7479ccc/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/7479ccc/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "5f918ef",
+    "published_at": "2025-03-25T19:09:08Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/5f918ef",
+    "changelog": {
+      "title": "[Misc] Replaced const with constexpr where possible",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/5f918ef/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/5f918ef/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "d20620e",
     "published_at": "2025-03-23T21:47:43Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/d20620e",
@@ -1485,6 +2514,25 @@
       {
         "name": "xenia_canary_linux.tar.gz",
         "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/d20620e/xenia_canary_linux.tar.gz"
+      }
+    ]
+  },
+  {
+    "tag_name": "0ee3940",
+    "published_at": "2025-03-23T19:38:24Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/0ee3940",
+    "changelog": {
+      "title": "[xb] Use WINDIR env var",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/0ee3940/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/0ee3940/xenia_canary_windows.zip"
       }
     ]
   },
@@ -1504,6 +2552,63 @@
       {
         "name": "xenia_canary_windows.zip",
         "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/a45a9d8/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "40bd008",
+    "published_at": "2025-03-18T21:54:52Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/40bd008",
+    "changelog": {
+      "title": "[Kernel] Fixed TU loading on Linux",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/40bd008/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/40bd008/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "1e2f903",
+    "published_at": "2025-03-16T20:13:15Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/1e2f903",
+    "changelog": {
+      "title": "[XAM] Improved XContentQueryVolumeDeviceType",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/1e2f903/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/1e2f903/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "6ae45ef",
+    "published_at": "2025-03-16T19:23:12Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/6ae45ef",
+    "changelog": {
+      "title": "[XAM] Fixed issue with profile creation introduced in previous version",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/6ae45ef/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/6ae45ef/xenia_canary_windows.zip"
       }
     ]
   },
@@ -1565,6 +2670,25 @@
     ]
   },
   {
+    "tag_name": "23d1f7a",
+    "published_at": "2025-03-13T23:04:01Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/23d1f7a",
+    "changelog": {
+      "title": "[XAM] Added overlap to XamUserWriteProfileSettings",
+      "changes": "This fixes saving in Earthworm Jim\n\nAdditionally fixed issue with not setting xuid to -1 when not provided"
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/23d1f7a/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/23d1f7a/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "c486725",
     "published_at": "2025-03-12T22:10:46Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/c486725",
@@ -1580,6 +2704,82 @@
       {
         "name": "xenia_canary_windows.zip",
         "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/c486725/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "25b3540",
+    "published_at": "2025-03-12T14:27:51Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/25b3540",
+    "changelog": {
+      "title": "[XAM] Added XEnableGuestSignin",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/25b3540/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/25b3540/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "570d30f",
+    "published_at": "2025-03-10T23:14:39Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/570d30f",
+    "changelog": {
+      "title": "[XAM/Input] Fixed issue with abnormal input in Aurora",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/570d30f/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/570d30f/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "763a3da",
+    "published_at": "2025-03-10T22:35:15Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/763a3da",
+    "changelog": {
+      "title": "[Threading] Change behaviour when provided timeout is 0 for Normal priority or less threads",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/763a3da/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/763a3da/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "27d9cb8",
+    "published_at": "2025-03-10T18:44:24Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/27d9cb8",
+    "changelog": {
+      "title": "[XAM] Added missing nullptr check.",
+      "changes": "This partially fixes Fable 2 main menu crashes.\nFigure out why game tries to save invalid data."
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/27d9cb8/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/27d9cb8/xenia_canary_windows.zip"
       }
     ]
   },
@@ -1603,6 +2803,25 @@
     ]
   },
   {
+    "tag_name": "0d06cdd",
+    "published_at": "2025-03-09T23:08:25Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/0d06cdd",
+    "changelog": {
+      "title": "[XAM] Removed overlap from XamUserReadProfileSettings. It currently breaks games for whatever reason.",
+      "changes": "- Updated params for: XamParseGamerTileKey, XamWriteGamerTile"
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/0d06cdd/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/0d06cdd/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "1544349",
     "published_at": "2025-03-09T22:51:12Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/1544349",
@@ -1618,6 +2837,44 @@
       {
         "name": "xenia_canary_windows.zip",
         "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/1544349/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "01fc219",
+    "published_at": "2025-03-08T22:10:50Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/01fc219",
+    "changelog": {
+      "title": "[HID] Fixed issue with controller spamming message.",
+      "changes": "This was caused by not ignoring cases when title provides unsupported flags.\nFor example support for big button controller."
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/01fc219/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/01fc219/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "34b7085",
+    "published_at": "2025-03-08T20:29:08Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/34b7085",
+    "changelog": {
+      "title": "[XAM/USER] - Implement XamUserCreateTitlesPlayedEnumerator",
+      "changes": "Implement of XamUserCreateTitlesPlayedEnumerator"
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/34b7085/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/34b7085/xenia_canary_windows.zip"
       }
     ]
   },
@@ -1660,6 +2917,25 @@
     ]
   },
   {
+    "tag_name": "5af7e15",
+    "published_at": "2025-03-08T18:38:14Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/5af7e15",
+    "changelog": {
+      "title": "[Emulator] Added extended logging on initialization",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/5af7e15/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/5af7e15/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "da89b6a",
     "published_at": "2025-03-08T16:48:06Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/da89b6a",
@@ -1679,6 +2955,63 @@
     ]
   },
   {
+    "tag_name": "6666b80",
+    "published_at": "2025-03-07T20:16:59Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/6666b80",
+    "changelog": {
+      "title": "[XAM] Added missing nullptr check during Spa loading",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/6666b80/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/6666b80/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "523a2dc",
+    "published_at": "2025-03-07T17:58:16Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/523a2dc",
+    "changelog": {
+      "title": "[3PP] Uplifted SDL2 to 2.32.2. Possibly next update to 3.0",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/523a2dc/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/523a2dc/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "1110cdd",
+    "published_at": "2025-03-07T11:17:43Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/1110cdd",
+    "changelog": {
+      "title": "[Kernel] Added support for writing/reading GPD files",
+      "changes": "This breaks settings in games that are using them and savefiles in games that use settings to store progress"
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/1110cdd/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/1110cdd/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "ccf7adf",
     "published_at": "2025-03-06T17:54:17Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/ccf7adf",
@@ -1694,6 +3027,25 @@
       {
         "name": "xenia_canary_windows.zip",
         "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/ccf7adf/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "60318a5",
+    "published_at": "2025-02-26T18:40:03Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/60318a5",
+    "changelog": {
+      "title": "[Module] Include XEX_SYSTEM_FLAGS in the log",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/60318a5/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/60318a5/xenia_canary_windows.zip"
       }
     ]
   },
@@ -1793,6 +3145,44 @@
     ]
   },
   {
+    "tag_name": "75d49df",
+    "published_at": "2025-02-13T08:45:27Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/75d49df",
+    "changelog": {
+      "title": "[xb] Add Python 3.14",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/75d49df/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/75d49df/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "180be36",
+    "published_at": "2025-02-07T07:45:32Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/180be36",
+    "changelog": {
+      "title": "[Xboxkrnl/Xconfig] - add xboxkrnl_xconfig.h",
+      "changes": "- Add xboxkrnl_xconfig.h to hold known Xconfig flags\n- Implement more xeExGetXConfigSetting cases"
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/180be36/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/180be36/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "b7b707d",
     "published_at": "2025-02-01T23:00:49Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/b7b707d",
@@ -1808,6 +3198,63 @@
       {
         "name": "xenia_canary_windows.zip",
         "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/b7b707d/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "4cc074d",
+    "published_at": "2025-01-28T13:17:34Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/4cc074d",
+    "changelog": {
+      "title": "[CI] Fix release title",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/4cc074d/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/4cc074d/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "54610b9",
+    "published_at": "2025-01-28T04:57:19Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/54610b9",
+    "changelog": {
+      "title": "[xb] Fall back to normal clone if shallow fails",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/54610b9/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/54610b9/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "787c8d0",
+    "published_at": "2025-01-28T03:28:56Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/787c8d0",
+    "changelog": {
+      "title": "[xb] \"Fix\" submodule update",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.gz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/787c8d0/xenia_canary_linux.tar.gz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/787c8d0/xenia_canary_windows.zip"
       }
     ]
   },
