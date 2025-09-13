@@ -59,9 +59,6 @@ def fetch_releases(repo: str):
             break
         debug(f"Fetched {len(batch)} releases from {repo}, page {page}")
         releases.extend(batch)
-        if len(batch) < per_page:
-            debug(f"Last page reached for {repo}.")
-            break
         page += 1
     return releases
 
@@ -113,39 +110,22 @@ if not os.path.exists(output_path):
         debug(f"Adding {len(processed)} releases from {repo}")
         all_releases.extend(processed)
 else:
-    debug("Existing JSON found, fetching only new releases from xenia-canary-releases...")
+    debug("Existing JSON found, fetching ALL releases from xenia-canary-releases...")
     with open(output_path, "r", encoding="utf-8") as f:
         existing = json.load(f)
-    existing_tags = {r["tag_name"] for r in existing}
-    all_releases = existing.copy()
-
-    page = 1
-    per_page = 100
+    
+    existing_dict = {r["tag_name"]: r for r in existing}
+    
+    raw_releases = fetch_releases("xenia-canary/xenia-canary-releases")
+    processed_releases = process_releases(raw_releases, "xenia-canary/xenia-canary-releases")
     new_count = 0
-    while True:
-        url = f"{GITHUB_API}/xenia-canary/xenia-canary-releases/releases?per_page={per_page}&page={page}"
-        batch = gh_get(url)
-        if not batch:
-            debug("No more releases fetched, stopping.")
-            break
-        
-        batch.sort(key=lambda r: r.get("published_at") or "", reverse=True)
-        stop_fetch = False
-        for rel in batch:
-            tag = rel.get("tag_name", "")
-            if tag in existing_tags:
-                debug(f"Reached existing tag {tag}, stopping fetch for newer releases.")
-                stop_fetch = True
-                break
-            processed = process_releases([rel], "xenia-canary/xenia-canary-releases")
-            if processed:
-                all_releases = processed + all_releases  # prepend newest first
-                new_count += 1
-                debug(f"Added new release {tag} (total new: {new_count})")
-        if stop_fetch or len(batch) < per_page:
-            debug("Finished fetching new releases.")
-            break
-        page += 1
+    for release in processed_releases:
+        if release["tag_name"] not in existing_dict:
+            existing_dict[release["tag_name"]] = release
+            new_count += 1
+            debug(f"Added new release {release['tag_name']} (total new: {new_count})")
+    all_releases = list(existing_dict.values())
+    debug(f"Total new releases added: {new_count}")
 
 debug(f"Total releases after update: {len(all_releases)}")
 
