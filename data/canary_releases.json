@@ -1,5 +1,20 @@
 [
   {
+    "tag_name": "8d03766",
+    "published_at": "2025-09-14T08:14:58Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/8d03766",
+    "changelog": {
+      "title": "[UI] Fixed GTK from propagating lowercase input to ImGUI",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/8d03766/xenia_canary_linux.tar.xz"
+      }
+    ]
+  },
+  {
     "tag_name": "4d1380d",
     "published_at": "2025-09-13T17:07:15Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/4d1380d",
