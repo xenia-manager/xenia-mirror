@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "bb740af",
+    "published_at": "2025-09-24T18:28:01Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/bb740af",
+    "changelog": {
+      "title": "[XAM] Fixed XamShowSigninUI ImGUI assert",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/bb740af/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/bb740af/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "fdd786d",
     "published_at": "2025-09-24T17:59:48Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/fdd786d",
