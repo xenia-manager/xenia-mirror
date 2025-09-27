@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "41b412f",
+    "published_at": "2025-09-27T07:55:48Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/41b412f",
+    "changelog": {
+      "title": "[Xam/XMP App] - Clean up & improvements",
+      "changes": "- Clean up xmp app\n- XMPGetTitlePlaylistBufferSize now returns proper errors\n- Implement XMPGetDashInItState\n- Add missing xnotifications"
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/41b412f/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/41b412f/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "8545fe7",
     "published_at": "2025-09-26T06:00:20Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/8545fe7",
