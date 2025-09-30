@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "2116660",
+    "published_at": "2025-09-30T16:49:01Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/2116660",
+    "changelog": {
+      "title": "[UI] Added some missing glyphs that might be used in text",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/2116660/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/2116660/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "41b412f",
     "published_at": "2025-09-27T07:55:48Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/41b412f",
