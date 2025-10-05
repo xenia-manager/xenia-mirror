@@ -1,5 +1,20 @@
 [
   {
+    "tag_name": "3e89d53",
+    "published_at": "2025-10-05T09:58:47Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/3e89d53",
+    "changelog": {
+      "title": "Fix menu hotkeys in Linux UI",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/3e89d53/xenia_canary_linux.tar.xz"
+      }
+    ]
+  },
+  {
     "tag_name": "2116660",
     "published_at": "2025-09-30T16:49:01Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/2116660",
