@@ -1,5 +1,58 @@
 [
   {
+    "tag_name": "dd15565",
+    "published_at": "2025-10-05T11:07:15Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/dd15565",
+    "changelog": {
+      "title": "[BUILD] Fixed parsing environment variables",
+      "changes": "This fixes the git command: git rebase --exec \"py xenia-build.py setup\" HEAD~1"
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/dd15565/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "fdbf225",
+    "published_at": "2025-10-05T10:47:06Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/fdbf225",
+    "changelog": {
+      "title": "[XAM] Added util functions to check gamer picture type",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/fdbf225/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/fdbf225/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "3e6a74b",
+    "published_at": "2025-10-05T10:18:22Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/3e6a74b",
+    "changelog": {
+      "title": "Ensure runtime directories are created in storage_root()",
+      "changes": "At the moment they end up wherever the command is run from on linux\nor exe directory on Windows, which ignores the \"portable\" install\nmechanism"
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/3e6a74b/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/3e6a74b/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "3e89d53",
     "published_at": "2025-10-05T09:58:47Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/3e89d53",
