@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "2e9c459",
+    "published_at": "2025-10-08T09:35:41Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/2e9c459",
+    "changelog": {
+      "title": "[Kernel] Fixed issue with WINE crash while opening played titles or achievements tab",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/2e9c459/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/2e9c459/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "703531d",
     "published_at": "2025-10-06T06:17:39Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/703531d",
