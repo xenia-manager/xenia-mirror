@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "9054a29",
+    "published_at": "2025-10-10T19:40:51Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/9054a29",
+    "changelog": {
+      "title": "[UI] Add simple support for controller usage in UI",
+      "changes": "- Disabled unnecessary hotkeys thread when it is not used\n- Removed problematic xam_exports static initialization\n- Moved xam_dialogs_shown_ and xam_nui_dialogs_shown_ to XamState"
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/9054a29/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/9054a29/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "2e9c459",
     "published_at": "2025-10-08T09:35:41Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/2e9c459",
