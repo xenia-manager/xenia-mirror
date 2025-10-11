@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "6d28a56",
+    "published_at": "2025-10-11T17:38:09Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/6d28a56",
+    "changelog": {
+      "title": "[XAM] Fixed lack of UI notification for headless notifications.",
+      "changes": "- Fixes regression introduced in previous commit\n- Fixed issue with multiple input if certain UI is active"
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/6d28a56/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/6d28a56/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "9054a29",
     "published_at": "2025-10-10T19:40:51Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/9054a29",
