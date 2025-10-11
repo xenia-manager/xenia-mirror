@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "62439cc",
+    "published_at": "2025-10-11T21:18:32Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/62439cc",
+    "changelog": {
+      "title": "[UI] Restored notification sending on window open/close",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/62439cc/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/62439cc/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "6d28a56",
     "published_at": "2025-10-11T17:38:09Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/6d28a56",
