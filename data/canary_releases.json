@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "f7ed633",
+    "published_at": "2025-10-12T09:25:42Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/f7ed633",
+    "changelog": {
+      "title": "[XAM] Reverted UI open/close notifications to version before introduction of controller input.",
+      "changes": "- This should fix all strange issues with frozen titles after closing popups"
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/f7ed633/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/f7ed633/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "62439cc",
     "published_at": "2025-10-11T21:18:32Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/62439cc",
