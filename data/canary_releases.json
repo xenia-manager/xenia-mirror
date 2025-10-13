@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "e27b1d1",
+    "published_at": "2025-10-13T20:27:41Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/e27b1d1",
+    "changelog": {
+      "title": "[UI] Fixed issues with ImGui on Vulkan and few ASAN issues related to ImGui",
+      "changes": "- Simplified handling of notifications to faster version with ranges\n- Removed usage of STB sprintf on checked due to ASAN violation\n- Draw ImGui windows only when they're not in close_pending state"
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/e27b1d1/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/e27b1d1/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "f7ed633",
     "published_at": "2025-10-12T09:25:42Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/f7ed633",
