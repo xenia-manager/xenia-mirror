@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "3dc8130",
+    "published_at": "2025-10-14T20:13:48Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/3dc8130",
+    "changelog": {
+      "title": "[XAM/CONTENT] - Add Missing returns and functions",
+      "changes": "- Add missing return values to XamContentCreateEx & XamContentCreateInternal\n- Add Struct of XCONTENT_DATA_INTERNAL\n- Properly implement XamProfileOpen\n- Stub XamContentGetDeviceVolumePath"
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/3dc8130/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/3dc8130/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "d430342",
     "published_at": "2025-10-14T17:28:28Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/d430342",
