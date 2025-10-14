@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "d430342",
+    "published_at": "2025-10-14T17:28:28Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/d430342",
+    "changelog": {
+      "title": "[Vulkan] Add resolution scaling support to Vulkan backend.",
+      "changes": "Largely similar to D3D12 implementation but more simple buffer\nmanagement and no mips scaling. Includes both FBO and FSI\nrendering paths.\n\nTested on Linux with 2x2 and 3x3 running smoothly."
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/d430342/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/d430342/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "2de1b0b",
     "published_at": "2025-10-14T11:21:46Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/2de1b0b",
