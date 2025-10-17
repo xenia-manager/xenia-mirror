@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "2cd35e8",
+    "published_at": "2025-10-17T18:45:06Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/2cd35e8",
+    "changelog": {
+      "title": "[Kernel] Remove sending tray state change notification when game is booted",
+      "changes": "- Games do not expect changing disc on boot it should happen when you're in dashboard"
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/2cd35e8/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/2cd35e8/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "777c394",
     "published_at": "2025-10-17T07:43:03Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/777c394",
