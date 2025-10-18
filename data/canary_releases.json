@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "a1a33b9",
+    "published_at": "2025-10-18T20:01:52Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/a1a33b9",
+    "changelog": {
+      "title": "[UI] Set ImGUI clipboard functions to GTK implementations",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/a1a33b9/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/a1a33b9/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "38ad9bf",
     "published_at": "2025-10-17T20:59:50Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/38ad9bf",
