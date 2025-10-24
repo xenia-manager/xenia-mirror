@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "ac00d09",
+    "published_at": "2025-10-24T08:18:24Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/ac00d09",
+    "changelog": {
+      "title": "[Memory] Ensure writecombine buffers are writable",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/ac00d09/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/ac00d09/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "88527a0",
     "published_at": "2025-10-24T07:42:48Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/88527a0",
