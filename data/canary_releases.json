@@ -1,5 +1,20 @@
 [
   {
+    "tag_name": "5d01ac0",
+    "published_at": "2025-10-24T19:09:29Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/5d01ac0",
+    "changelog": {
+      "title": "[XAM/CONTENT] -  Add missing flags to XCONTENT_DATA_INTERNAL",
+      "changes": "- add missing XCONTENT_DATA_INTERNAL  flags"
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/5d01ac0/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "7d8ac86",
     "published_at": "2025-10-24T17:54:46Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/7d8ac86",
