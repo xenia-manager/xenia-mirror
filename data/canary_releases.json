@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "88527a0",
+    "published_at": "2025-10-24T07:42:48Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/88527a0",
+    "changelog": {
+      "title": "[XAM] Return pending in XamUserContentRestrictionCheckAccess",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/88527a0/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/88527a0/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "4644657",
     "published_at": "2025-10-23T06:13:16Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/4644657",
