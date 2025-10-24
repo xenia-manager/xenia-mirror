@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "7d8ac86",
+    "published_at": "2025-10-24T17:54:46Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/7d8ac86",
+    "changelog": {
+      "title": "[CPU] Do not return error code from unimplemented overflows checks",
+      "changes": "Debug assertion and log message still appears"
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/7d8ac86/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/7d8ac86/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "ac00d09",
     "published_at": "2025-10-24T08:18:24Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/ac00d09",
