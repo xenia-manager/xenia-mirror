@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "dc151eb",
+    "published_at": "2025-10-27T13:36:51Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/dc151eb",
+    "changelog": {
+      "title": "[Emulator] Fixed media and font loading on linux.",
+      "changes": "Caused by treating guest path as host path"
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/dc151eb/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/dc151eb/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "5d01ac0",
     "published_at": "2025-10-24T19:09:29Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/5d01ac0",
