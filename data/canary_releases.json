@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "906c0b8",
+    "published_at": "2025-10-28T17:03:57Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/906c0b8",
+    "changelog": {
+      "title": "[CPU] Fixed issue with const path in AVX512 vector left rotate.",
+      "changes": "- Added logging in case of similar issues"
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/906c0b8/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/906c0b8/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "dc151eb",
     "published_at": "2025-10-27T13:36:51Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/dc151eb",
