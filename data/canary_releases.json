@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "4af2fd6",
+    "published_at": "2025-10-28T22:21:35Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/4af2fd6",
+    "changelog": {
+      "title": "[Kernel] Add Linux socket support and ensure binding low ports is remapped.",
+      "changes": "Remapping ports on both Linux and Windows to ensure games boot under\nwine as well."
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/4af2fd6/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/4af2fd6/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "344e853",
     "published_at": "2025-10-28T21:05:19Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/344e853",
