@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "344e853",
+    "published_at": "2025-10-28T21:05:19Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/344e853",
+    "changelog": {
+      "title": "[XMP] Make volume atomic, fixed issue with invalid SetVolume received from guest",
+      "changes": "- Replaced invalid log"
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/344e853/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/344e853/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "a25bbed",
     "published_at": "2025-10-28T18:57:58Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/a25bbed",
