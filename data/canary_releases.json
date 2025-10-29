@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "707c79a",
+    "published_at": "2025-10-29T09:08:56Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/707c79a",
+    "changelog": {
+      "title": "[XMP] Ensure volume always set when driver created.",
+      "changes": "Fixes the issue of the volume starting at default and abruptly\nadjusting to the game setting as it changes."
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/707c79a/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/707c79a/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "4af2fd6",
     "published_at": "2025-10-28T22:21:35Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/4af2fd6",
