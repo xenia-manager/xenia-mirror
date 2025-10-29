@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "51414f3",
+    "published_at": "2025-10-29T20:36:32Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/51414f3",
+    "changelog": {
+      "title": "[Logging] Added ability to disable GPU related logs",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/51414f3/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/51414f3/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "d68339d",
     "published_at": "2025-10-29T11:27:31Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/d68339d",
