@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "dffba5a",
+    "published_at": "2025-10-29T21:53:31Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/dffba5a",
+    "changelog": {
+      "title": "[XAM] Implemented XamUserLogon",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/dffba5a/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/dffba5a/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "51414f3",
     "published_at": "2025-10-29T20:36:32Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/51414f3",
