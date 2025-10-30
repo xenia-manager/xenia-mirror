@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "e6828af",
+    "published_at": "2025-10-30T21:16:32Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/e6828af",
+    "changelog": {
+      "title": "[Base] Fixed issue with unnecessary null terminator after reading u16string",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/e6828af/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/e6828af/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "edd48cd",
     "published_at": "2025-10-30T19:33:57Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/edd48cd",
