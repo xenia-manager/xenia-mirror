@@ -1,5 +1,43 @@
 [
   {
+    "tag_name": "eed4242",
+    "published_at": "2025-10-30T17:56:54Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/eed4242",
+    "changelog": {
+      "title": "[XAM] - xcontent_type fixes & more",
+      "changes": "- added unknown smc call\n- xcontent_type corrections\n- add transfer cable to device type\n- Select gamer type in gamercard"
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/eed4242/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/eed4242/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "6a8193d",
+    "published_at": "2025-10-30T17:18:03Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/6a8193d",
+    "changelog": {
+      "title": "[XAM] Added achievement types to log table",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/6a8193d/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/6a8193d/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "299ba08",
     "published_at": "2025-10-30T07:36:20Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/299ba08",
