@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "921a33a",
+    "published_at": "2025-10-31T08:55:14Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/921a33a",
+    "changelog": {
+      "title": "[XAM/AVATAR] - expanding on stubs",
+      "changes": "- Add structs\n- Sketchy implementation of XamAvatarGetInstalledAssetPackageDescription\n- Stub XamAvatarSetManifest\n- Have XAvatarGetAssets return X_E_FAIL in overlapped to allow [58410907](https://github.com/xenia-project/game-compatibility/issues/1848) to start match in netplay\n- Adrian helped find lots of the unknowns and stub XamAvatarGetManifestLocalUser\n\nCo-Authored-By: Adrian <78108584+AdrianCassar@users.noreply.github.com>"
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/921a33a/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/921a33a/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "7738ff7",
     "published_at": "2025-10-31T07:30:41Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/7738ff7",
