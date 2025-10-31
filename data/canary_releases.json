@@ -1,5 +1,43 @@
 [
   {
+    "tag_name": "7738ff7",
+    "published_at": "2025-10-31T07:30:41Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/7738ff7",
+    "changelog": {
+      "title": "[XAM] Fixed invalid gamertag in XamProfileCreateEnumerator and XamProfileFindAccount",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/7738ff7/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/7738ff7/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "324f65f",
+    "published_at": "2025-10-31T07:28:38Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/324f65f",
+    "changelog": {
+      "title": "[XAM] Fixed invalid gamertag in XamProfileCreateEnumerator",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/324f65f/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/324f65f/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "e6828af",
     "published_at": "2025-10-30T21:16:32Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/e6828af",
