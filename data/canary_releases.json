@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "1ad35e4",
+    "published_at": "2025-11-01T16:56:45Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/1ad35e4",
+    "changelog": {
+      "title": "[CPU/X64] Added missing const path to Emit8_IN_16",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/1ad35e4/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/1ad35e4/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "921a33a",
     "published_at": "2025-10-31T08:55:14Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/921a33a",
