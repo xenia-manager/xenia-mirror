@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "ade064d",
+    "published_at": "2025-11-01T20:59:10Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/ade064d",
+    "changelog": {
+      "title": "[Build] Disable clang21 warnings in third_party",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/ade064d/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/ade064d/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "f1d444d",
     "published_at": "2025-11-01T18:38:33Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/f1d444d",
