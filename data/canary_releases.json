@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "f1d444d",
+    "published_at": "2025-11-01T18:38:33Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/f1d444d",
+    "changelog": {
+      "title": "[CPU/X64] Added const path for indirect call",
+      "changes": "This prevents having false-positive logs about invalid handling\n\nThis case should only happen on deadend paths of code like calling 0"
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/f1d444d/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/f1d444d/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "1ad35e4",
     "published_at": "2025-11-01T16:56:45Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/1ad35e4",
