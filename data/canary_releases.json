@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "b800011",
+    "published_at": "2025-11-01T23:04:57Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/b800011",
+    "changelog": {
+      "title": "[NET] Cleanup WSAStartup, setoption and ioctlsocket",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/b800011/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/b800011/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "ade064d",
     "published_at": "2025-11-01T20:59:10Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/ade064d",
