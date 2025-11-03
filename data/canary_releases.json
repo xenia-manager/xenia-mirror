@@ -1,5 +1,43 @@
 [
   {
+    "tag_name": "efa0a8b",
+    "published_at": "2025-11-03T22:02:01Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/efa0a8b",
+    "changelog": {
+      "title": "[XBDM] Added sketchy implementation of DmPMCGetCounterName and DmPMCInstallAndStart",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/efa0a8b/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/efa0a8b/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "892aa85",
+    "published_at": "2025-11-03T21:37:18Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/892aa85",
+    "changelog": {
+      "title": "[Premake] Remove AVX2 requirement from linux build",
+      "changes": "Co-authored-by: has207 <429230+has207@users.noreply.github.com>"
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/892aa85/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/892aa85/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "3252d25",
     "published_at": "2025-11-03T19:30:26Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/3252d25",
