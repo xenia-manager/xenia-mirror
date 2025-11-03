@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "3252d25",
+    "published_at": "2025-11-03T19:30:26Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/3252d25",
+    "changelog": {
+      "title": "[Emulator] Removed windows rdrand ntdll patch",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/3252d25/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/3252d25/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "b800011",
     "published_at": "2025-11-01T23:04:57Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/b800011",
