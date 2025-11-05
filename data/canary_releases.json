@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "48c854f",
+    "published_at": "2025-11-05T22:01:52Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/48c854f",
+    "changelog": {
+      "title": "[UI] Added online label for achievements unlocked online",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/48c854f/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/48c854f/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "efa0a8b",
     "published_at": "2025-11-03T22:02:01Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/efa0a8b",
