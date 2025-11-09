@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "e3f8ec7",
+    "published_at": "2025-11-09T15:53:27Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/e3f8ec7",
+    "changelog": {
+      "title": "[UI] Allow gamepad to open profile context menu",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/e3f8ec7/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/e3f8ec7/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "0e51e33",
     "published_at": "2025-11-09T14:01:03Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/0e51e33",
