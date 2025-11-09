@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "702fbc8",
+    "published_at": "2025-11-09T21:19:53Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/702fbc8",
+    "changelog": {
+      "title": "[CPU/X64] Fixed random on boot crashes related to rsp not being aligned",
+      "changes": "vmovaps returns failure if it encounters unaligned memory.\nAlignemnt must be done on 16 bytes, but sometimes rsp ends with 8"
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/702fbc8/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/702fbc8/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "e3f8ec7",
     "published_at": "2025-11-09T15:53:27Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/e3f8ec7",
