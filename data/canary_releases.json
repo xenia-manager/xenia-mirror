@@ -1,5 +1,20 @@
 [
   {
+    "tag_name": "0e51e33",
+    "published_at": "2025-11-09T14:01:03Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/0e51e33",
+    "changelog": {
+      "title": "Allow user to use wayland backend of gdk",
+      "changes": "Users can set GDK_BACKEND by themselves which will override the default x11 value"
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/0e51e33/xenia_canary_linux.tar.xz"
+      }
+    ]
+  },
+  {
     "tag_name": "48c854f",
     "published_at": "2025-11-05T22:01:52Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/48c854f",
