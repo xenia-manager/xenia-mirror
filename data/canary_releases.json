@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "58a38ba",
+    "published_at": "2025-11-10T19:31:11Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/58a38ba",
+    "changelog": {
+      "title": "[NET] Match WSAStartup behaviour to console",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/58a38ba/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/58a38ba/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "68b3490",
     "published_at": "2025-11-10T00:18:03Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/68b3490",
