@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "44c2882",
+    "published_at": "2025-11-10T23:24:15Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/44c2882",
+    "changelog": {
+      "title": "[XAM] Mark XamGetPrivateEnumStructureFromHandle as Implemented",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/44c2882/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/44c2882/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "58a38ba",
     "published_at": "2025-11-10T19:31:11Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/58a38ba",
