@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "09b9e37",
+    "published_at": "2025-11-13T17:38:34Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/09b9e37",
+    "changelog": {
+      "title": "Revert \"[Kernel] Fixed invalid address of a native object pointer\"",
+      "changes": "This reverts commit 68b3490c8bdb2a819e80b113457aa16c6634118e."
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/09b9e37/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/09b9e37/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "44c2882",
     "published_at": "2025-11-10T23:24:15Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/44c2882",
