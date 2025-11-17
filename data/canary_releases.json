@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "4ebf899",
+    "published_at": "2025-11-17T17:49:40Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/4ebf899",
+    "changelog": {
+      "title": "[XMA] Revert changes in old XMA decoder to state from master repository.",
+      "changes": "- If you have new issues with sound it is recommended to switch to new decoder."
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/4ebf899/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/4ebf899/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "c6be501",
     "published_at": "2025-11-17T12:55:35Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/c6be501",
