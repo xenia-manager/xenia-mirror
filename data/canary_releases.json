@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "c6be501",
+    "published_at": "2025-11-17T12:55:35Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/c6be501",
+    "changelog": {
+      "title": "[3PP] Uplifted FMT to 12.1",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/c6be501/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/c6be501/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "56697f1",
     "published_at": "2025-11-17T08:10:22Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/56697f1",
