@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "1bf98e9",
+    "published_at": "2025-11-18T22:21:25Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/1bf98e9",
+    "changelog": {
+      "title": "[D3D12] Restored memory access safeguard",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/1bf98e9/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/1bf98e9/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "243178a",
     "published_at": "2025-11-18T20:46:45Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/243178a",
