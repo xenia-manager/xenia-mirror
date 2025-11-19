@@ -1,5 +1,20 @@
 [
   {
+    "tag_name": "eb6221d",
+    "published_at": "2025-11-19T21:09:48Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/eb6221d",
+    "changelog": {
+      "title": "[XAM] Added is_system_property util to UserData",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/eb6221d/xenia_canary_linux.tar.xz"
+      }
+    ]
+  },
+  {
     "tag_name": "1bf98e9",
     "published_at": "2025-11-18T22:21:25Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/1bf98e9",
