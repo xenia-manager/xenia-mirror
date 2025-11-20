@@ -1,5 +1,39 @@
 [
   {
+    "tag_name": "605bfd0",
+    "published_at": "2025-11-20T12:14:02Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/605bfd0",
+    "changelog": {
+      "title": "[premake] Remove redundant vectorextensions",
+      "changes": "Make clang version into a variable."
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/605bfd0/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/605bfd0/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "ab4146c",
+    "published_at": "2025-11-20T12:02:59Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/ab4146c",
+    "changelog": {
+      "title": "[xb] Fix xb symbolic link",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/ab4146c/xenia_canary_linux.tar.xz"
+      }
+    ]
+  },
+  {
     "tag_name": "eb6221d",
     "published_at": "2025-11-19T21:09:48Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/eb6221d",
