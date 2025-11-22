@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "d915dd8",
+    "published_at": "2025-11-22T20:39:03Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/d915dd8",
+    "changelog": {
+      "title": "[XAM] Implemented SPA XRPT",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/d915dd8/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/d915dd8/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "605bfd0",
     "published_at": "2025-11-20T12:14:02Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/605bfd0",
