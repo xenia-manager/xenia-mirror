@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "07501cf",
+    "published_at": "2025-11-22T21:48:23Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/07501cf",
+    "changelog": {
+      "title": "[XAM] Fixed XEnumerateCrossTitle corrupt items_returned_ptr",
+      "changes": "Fixed Halo: Reach from crashing when accessing The Armory"
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/07501cf/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/07501cf/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "d915dd8",
     "published_at": "2025-11-22T20:39:03Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/d915dd8",
