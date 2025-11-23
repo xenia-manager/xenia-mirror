@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "520353e",
+    "published_at": "2025-11-23T17:44:03Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/520353e",
+    "changelog": {
+      "title": "[SDL] Fixed spam caused by infinitely increasing packet count",
+      "changes": "It was incremented with each GetState instead of controller state update"
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/520353e/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/520353e/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "07501cf",
     "published_at": "2025-11-22T21:48:23Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/07501cf",
