@@ -1,5 +1,43 @@
 [
   {
+    "tag_name": "e7d08b8",
+    "published_at": "2025-11-23T18:59:14Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/e7d08b8",
+    "changelog": {
+      "title": "[XAM] Improved writing struct for XEnumerateCrossTitle",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/e7d08b8/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/e7d08b8/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "6783bea",
+    "published_at": "2025-11-23T18:37:12Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/6783bea",
+    "changelog": {
+      "title": "[XAM] Implemented SPA XMAT",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/6783bea/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/6783bea/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "520353e",
     "published_at": "2025-11-23T17:44:03Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/520353e",
