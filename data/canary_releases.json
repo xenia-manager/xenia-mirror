@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "481ab59",
+    "published_at": "2025-11-23T21:04:58Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/481ab59",
+    "changelog": {
+      "title": "[Kernel] ObReferenceObjectByHandle Cleanup",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/481ab59/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/481ab59/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "e7d08b8",
     "published_at": "2025-11-23T18:59:14Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/e7d08b8",
