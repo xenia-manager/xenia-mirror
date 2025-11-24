@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "529e10f",
+    "published_at": "2025-11-24T18:46:24Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/529e10f",
+    "changelog": {
+      "title": "[XAM] Fixed license_mask config option not being applied to content (DLCs)",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/529e10f/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/529e10f/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "81871e7",
     "published_at": "2025-11-24T13:16:49Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/81871e7",
