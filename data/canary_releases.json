@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "10bfc92",
+    "published_at": "2025-11-28T22:06:23Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/10bfc92",
+    "changelog": {
+      "title": "[XAM] Stubbed XMPCreateUserPlaylistEnumerator",
+      "changes": "Fixed 545408C0 freezing at main menu."
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/10bfc92/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/10bfc92/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "2997b91",
     "published_at": "2025-11-28T17:49:19Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/2997b91",
