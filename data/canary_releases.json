@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "70e44ab",
+    "published_at": "2025-11-29T22:42:21Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/70e44ab",
+    "changelog": {
+      "title": "[APP] Added config option to disable fullscreen mode on mouse double-click",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/70e44ab/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/70e44ab/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "ce5100c",
     "published_at": "2025-11-29T13:43:14Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/ce5100c",
