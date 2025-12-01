@@ -1,5 +1,20 @@
 [
   {
+    "tag_name": "e2c3368",
+    "published_at": "2025-12-01T16:58:03Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/e2c3368",
+    "changelog": {
+      "title": "[GPU] Double-buffer readback_resolve.",
+      "changes": "Introduce \"fast\" readback resolve that reads from previous frame's\nresolve buffers, quick swap between buffers each frame to avoid\ncopies so minimal performance impact and mostly correct bahavior.\nChecks if previous frame had a buffer for the current resolve and\nfalls through to the slow path, which also allows to support\n\"screenshot\" features in the games that do that without stalling\non normal resolve operations.\n\nRe-enabled readback_memexport as separate feature, was previously\nbundled with readback_resolve (probably not intentionally) and\nensures destination address is writeable to avoid memory access\nrelated crashes and unnecessary work.\n\nreadback_resolve cvar changes from bool to string ternary with\n\"none\", \"fast\" and \"full\" options, defaulting to the new \"fast\"\nmode."
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/e2c3368/xenia_canary_linux.tar.xz"
+      }
+    ]
+  },
+  {
     "tag_name": "70e44ab",
     "published_at": "2025-11-29T22:42:21Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/70e44ab",
