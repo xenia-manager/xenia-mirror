@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "78e753e",
+    "published_at": "2025-12-02T21:55:03Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/78e753e",
+    "changelog": {
+      "title": "[GPU] Added config option to enable/disable invalid memory uploads",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/78e753e/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/78e753e/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "dd29365",
     "published_at": "2025-12-01T23:18:26Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/dd29365",
