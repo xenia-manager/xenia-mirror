@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "dd29365",
+    "published_at": "2025-12-01T23:18:26Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/dd29365",
+    "changelog": {
+      "title": "[APU] Switched to New XMA decoder as default",
+      "changes": "- Added codepath for \"consume only\" pass. This should resolve constant clicking in Source engine games.\n- Added smaller performance improvements to decoder"
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/dd29365/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/dd29365/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "dfa70b3",
     "published_at": "2025-12-01T22:22:44Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/dfa70b3",
