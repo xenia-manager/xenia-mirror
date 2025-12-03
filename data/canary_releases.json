@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "4494e40",
+    "published_at": "2025-12-03T19:25:21Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/4494e40",
+    "changelog": {
+      "title": "[XMA] Added multiple versions of XMA decoders",
+      "changes": "- Fake: No decoding\n- Master: 1:1 from base version of Xenia\n- Old: Master with improvements\n- New: Completely new decoder with better stability (but not compability)\n\nCo-authored-by: Herman S. <429230+has207@users.noreply.github.com>"
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/4494e40/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/4494e40/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "e588a77",
     "published_at": "2025-12-03T09:25:40Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/e588a77",
