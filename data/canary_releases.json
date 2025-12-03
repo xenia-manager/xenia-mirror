@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "e588a77",
+    "published_at": "2025-12-03T09:25:40Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/e588a77",
+    "changelog": {
+      "title": "[XBDM] Implement DmQueryTitleMemoryStatistics",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/e588a77/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/e588a77/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "78e753e",
     "published_at": "2025-12-02T21:55:03Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/78e753e",
