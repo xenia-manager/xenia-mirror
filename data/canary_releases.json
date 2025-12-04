@@ -1,5 +1,43 @@
 [
   {
+    "tag_name": "f85f4c3",
+    "published_at": "2025-12-04T21:01:23Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/f85f4c3",
+    "changelog": {
+      "title": "[Kernel] Fixed Xbox Live disconnected error code",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/f85f4c3/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/f85f4c3/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "1d410f0",
+    "published_at": "2025-12-04T20:40:45Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/1d410f0",
+    "changelog": {
+      "title": "[APP] Don't delete Zar extraction folder on failure if empty",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/1d410f0/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/1d410f0/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "90a7cc4",
     "published_at": "2025-12-04T19:31:25Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/90a7cc4",
