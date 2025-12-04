@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "90a7cc4",
+    "published_at": "2025-12-04T19:31:25Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/90a7cc4",
+    "changelog": {
+      "title": "[GPU] Changed default readback_resolve to none",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/90a7cc4/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/90a7cc4/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "4494e40",
     "published_at": "2025-12-03T19:25:21Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/4494e40",
