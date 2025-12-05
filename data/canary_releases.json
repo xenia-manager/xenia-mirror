@@ -1,5 +1,43 @@
 [
   {
+    "tag_name": "0af253e",
+    "published_at": "2025-12-05T21:48:29Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/0af253e",
+    "changelog": {
+      "title": "[XMA] Separate error status into status and set fields",
+      "changes": "It's separate bit that defines if error is present"
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/0af253e/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/0af253e/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "038b11a",
+    "published_at": "2025-12-05T21:13:30Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/038b11a",
+    "changelog": {
+      "title": "[GPU] Removed nvapi",
+      "changes": "- According to reports d3d12_nvapi_use_driver_heap_priorities give no benefit"
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/038b11a/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/038b11a/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "f85f4c3",
     "published_at": "2025-12-04T21:01:23Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/f85f4c3",
