@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "2b77c4c",
+    "published_at": "2025-12-07T18:29:14Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/2b77c4c",
+    "changelog": {
+      "title": "[D3D12] Simplify Intel Arc GPU checking",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/2b77c4c/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/2b77c4c/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "32889f5",
     "published_at": "2025-12-06T21:50:40Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/32889f5",
