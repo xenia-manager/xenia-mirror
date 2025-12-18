@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "925c597",
+    "published_at": "2025-12-18T07:04:15Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/925c597",
+    "changelog": {
+      "title": "[XAM] Cleanup parsing gamer tile key",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/925c597/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/925c597/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "a895138",
     "published_at": "2025-12-15T07:31:55Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/a895138",
