@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "d78bc3a",
+    "published_at": "2025-12-18T09:34:25Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/d78bc3a",
+    "changelog": {
+      "title": "[UI]: fix ASAN errors",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/d78bc3a/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/d78bc3a/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "925c597",
     "published_at": "2025-12-18T07:04:15Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/925c597",
