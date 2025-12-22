@@ -1,5 +1,43 @@
 [
   {
+    "tag_name": "169fea9",
+    "published_at": "2025-12-22T09:50:57Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/169fea9",
+    "changelog": {
+      "title": "[XAM/XLIVE] - Set proper returns when offline",
+      "changes": "- Have XLive functions return their offline values.\n- Have XGIUserReadStats return X_ONLINE_E_LOGON_NOT_LOGGED_ON"
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/169fea9/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/169fea9/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "492fa7c",
+    "published_at": "2025-12-22T09:20:28Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/492fa7c",
+    "changelog": {
+      "title": "use concepts instead of SFINAE",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/492fa7c/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/492fa7c/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "d78bc3a",
     "published_at": "2025-12-18T09:34:25Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/d78bc3a",
