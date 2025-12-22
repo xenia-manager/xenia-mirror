@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "e786d5c",
+    "published_at": "2025-12-22T18:06:46Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/e786d5c",
+    "changelog": {
+      "title": "[XAM] Fixed potantial crash while upserting setting related to missing SPA",
+      "changes": "- Fixed OOR asssertion caused by invalid amount of characters read by from_string"
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/e786d5c/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/e786d5c/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "169fea9",
     "published_at": "2025-12-22T09:50:57Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/169fea9",
