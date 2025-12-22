@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "ac66db3",
+    "published_at": "2025-12-22T18:52:52Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/ac66db3",
+    "changelog": {
+      "title": "[XAM] Fixed size used in read_u16string_and_swap",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/ac66db3/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/ac66db3/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "e786d5c",
     "published_at": "2025-12-22T18:06:46Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/e786d5c",
