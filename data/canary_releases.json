@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "547226f",
+    "published_at": "2025-12-23T22:47:48Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/547226f",
+    "changelog": {
+      "title": "[XMA] Cleanup in XmaDecoder::WriteRegister",
+      "changes": "- Replaced manual for loop with C++20 countr_zero standard call"
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/547226f/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/547226f/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "ac66db3",
     "published_at": "2025-12-22T18:52:52Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/ac66db3",
