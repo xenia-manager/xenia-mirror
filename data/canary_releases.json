@@ -1,5 +1,43 @@
 [
   {
+    "tag_name": "594e8b8",
+    "published_at": "2025-12-24T21:53:13Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/594e8b8",
+    "changelog": {
+      "title": "[XAM] Add null terminator in UserData for WSTRING",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/594e8b8/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/594e8b8/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "01aec51",
+    "published_at": "2025-12-24T21:31:01Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/01aec51",
+    "changelog": {
+      "title": "[XAM] Fixed invalid xuid being returned when only online XUID is requested",
+      "changes": "- Fixes stats loading of GoW3 savefile (and maybe checkpoints)\n\nCo-authored-by: Adrian <78108584+AdrianCassar@users.noreply.github.com>"
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/01aec51/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/01aec51/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "547226f",
     "published_at": "2025-12-23T22:47:48Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/547226f",
