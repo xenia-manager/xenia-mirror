@@ -1,5 +1,24 @@
 [
   {
+    "tag_name": "fcebdfb",
+    "published_at": "2025-12-27T18:22:01Z",
+    "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/fcebdfb",
+    "changelog": {
+      "title": "[GPU] Fix scaled resolve tracking for blocks outside write range",
+      "changes": ""
+    },
+    "assets": [
+      {
+        "name": "xenia_canary_linux.tar.xz",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/fcebdfb/xenia_canary_linux.tar.xz"
+      },
+      {
+        "name": "xenia_canary_windows.zip",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/fcebdfb/xenia_canary_windows.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "f8fb490",
     "published_at": "2025-12-26T21:09:49Z",
     "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/tag/f8fb490",
