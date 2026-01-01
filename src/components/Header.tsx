@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useTheme } from "./ThemeProvider";
 
 export default function Header() {
@@ -17,7 +16,7 @@ export default function Header() {
                   }`}
     >
       <div className="flex items-center gap-4">
-        <Image
+        <img
           src="https://avatars.githubusercontent.com/u/173571265?s=200&v=4"
           alt="Xenia Logo"
           width={56}
