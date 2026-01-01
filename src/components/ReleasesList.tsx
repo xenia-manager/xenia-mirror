@@ -59,16 +59,45 @@ export default function ReleasesList() {
       const matchesSearch = searchValue === "" || inTitle || inTag;
 
       // Date filter
-      const releaseDate = new Date(rel.published_at);
       let matchesDate = true;
 
+      // Safely parse the release date
+      let releaseDate: Date | null = null;
+      try {
+        releaseDate = new Date(rel.published_at);
+        // Check if the date is valid
+        if (isNaN(releaseDate.getTime())) {
+          console.warn(`Invalid date for release: ${rel.tag_name}, date: ${rel.published_at}`);
+          return false; // Exclude releases with invalid dates
+        }
+      } catch (error) {
+        console.warn(`Error parsing date for release: ${rel.tag_name}, date: ${rel.published_at}`, error);
+        return false; // Exclude releases with invalid dates
+      }
+
       if (fromDate) {
-        const from = new Date(fromDate);
-        if (releaseDate < from) matchesDate = false;
+        try {
+          // Create a date object for the start of the fromDate (00:00:00)
+          const from = new Date(fromDate);
+          if (isNaN(from.getTime())) throw new Error("Invalid from date");
+          from.setHours(0, 0, 0, 0);
+          if (releaseDate < from) matchesDate = false;
+        } catch (error) {
+          console.warn(`Error parsing from date: ${fromDate}`, error);
+          matchesDate = false; // If the from date is invalid, exclude all
+        }
       }
       if (toDate) {
-        const to = new Date(toDate);
-        if (releaseDate > to) matchesDate = false;
+        try {
+          // Create a date object for the end of the toDate (23:59:59)
+          const to = new Date(toDate);
+          if (isNaN(to.getTime())) throw new Error("Invalid to date");
+          to.setHours(23, 59, 59, 999);
+          if (releaseDate > to) matchesDate = false;
+        } catch (error) {
+          console.warn(`Error parsing to date: ${toDate}`, error);
+          matchesDate = false; // If the to date is invalid, exclude all
+        }
       }
 
       return matchesSearch && matchesDate;
