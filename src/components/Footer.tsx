@@ -7,16 +7,18 @@ export default function Footer() {
 
   return (
     <footer
-      className={`rounded-t-2xl mt-8 p-4 text-center
+      className={`rounded-t-2xl mt-8 p-6 text-center
                   ${
                     theme === "dark"
-                      ? "glass-bg-dark glass-border-dark"
-                      : "glass-bg-light glass-border-light"
+                      ? "bg-dark-secondary"
+                      : "bg-light-secondary"
                   }`}
     >
-      <p className="text-gray-500">
-        Powered by Xenia Manager • Not affiliated with Xenia Team
-      </p>
+      <div className="max-w-5xl mx-auto">
+        <p className={`${theme === "dark" ? "text-fluent-neutral" : "text-gray-600"}`}>
+          Powered by Xenia Manager • Not affiliated with Xenia Team
+        </p>
+      </div>
     </footer>
   );
 }

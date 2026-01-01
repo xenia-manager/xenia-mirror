@@ -27,7 +27,7 @@ export default function ReleaseCard({ release }: ReleaseCardProps) {
 
   return (
     <div
-      className={`rounded-xl p-5 shadow-lg
+      className={`rounded-xl p-6 shadow-lg
                   transition-all duration-300 hover:-translate-y-1 hover:shadow-xl
                   ${
                     theme === "dark"
@@ -36,12 +36,12 @@ export default function ReleaseCard({ release }: ReleaseCardProps) {
                   }`}
     >
       {/* Title */}
-      <div className="text-lg font-semibold mb-2">
+      <div className="text-lg font-semibold mb-3">
         <a
           href={release.url}
           target="_blank"
           rel="noopener noreferrer"
-          className={`hover:text-xbox-hover hover:underline transition-colors
+          className={`hover:text-xbox-hover hover:underline transition-colors link-style
                      ${theme === "dark" ? "text-fluent-neutral-dark" : "text-gray-900"}`}
         >
           {release.changelog.title || release.tag_name}
@@ -50,24 +50,26 @@ export default function ReleaseCard({ release }: ReleaseCardProps) {
 
       {/* Changes */}
       {release.changelog.changes && (
-        <div className={`text-sm mb-4 whitespace-pre-wrap ${
-          theme === "dark" ? "text-fluent-neutral" : "text-gray-600"
+        <div className={`text-sm mb-4 whitespace-pre-wrap p-3 rounded-lg ${
+          theme === "dark"
+            ? "bg-dark-accent text-fluent-neutral"
+            : "bg-light-accent text-gray-600"
         }`}>
           {release.changelog.changes}
         </div>
       )}
 
       {/* Meta */}
-      <div className="flex justify-between items-center mb-4 flex-wrap gap-2">
+      <div className="flex justify-between items-center mb-5 flex-wrap gap-2">
         <div className="text-xbox-green font-medium">
           <a
             href={`https://github.com/xenia-canary/xenia-canary/commit/${release.tag_name}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-xbox-hover hover:underline transition-colors"
+            className="hover:text-xbox-hover hover:underline transition-colors link-style"
           >
             <code
-              className={`px-2 py-1 rounded-md text-sm font-mono
+              className={`px-3 py-1 rounded-md text-sm font-mono
                          ${
                            theme === "dark"
                              ? "bg-dark-accent text-fluent-neutral-dark"
@@ -78,7 +80,9 @@ export default function ReleaseCard({ release }: ReleaseCardProps) {
             </code>
           </a>
         </div>
-        <div className={`${theme === "dark" ? "text-fluent-neutral" : "text-gray-500"} text-sm`}>Released on {dateFormatted}</div>
+        <div className={`${theme === "dark" ? "text-fluent-neutral" : "text-gray-500"} text-sm flex items-center gap-1`}>
+          <span>📅</span> {dateFormatted}
+        </div>
       </div>
 
       {/* Download Links */}
@@ -90,9 +94,9 @@ export default function ReleaseCard({ release }: ReleaseCardProps) {
             target="_blank"
             rel="noopener noreferrer"
             className="flex-1 text-center py-3 px-4 btn-xbox rounded-lg
-                       transition-all duration-200 min-w-[120px]"
+                       transition-all duration-200 min-w-[140px] flex items-center justify-center gap-2"
           >
-            {getAssetLabel(asset.name)}
+            <span>{getAssetLabel(asset.name)}</span>
           </a>
         ))}
       </div>

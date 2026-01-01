@@ -28,6 +28,7 @@
 
   /* Animations */
   --animate-float: floatAnim 25s ease-in-out infinite;
+  --animate-pulse: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 
   @keyframes floatAnim {
     0%,
@@ -38,6 +39,38 @@
       transform: translateY(-20px);
     }
   }
+
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: .5;
+    }
+  }
+}
+
+/* Background classes without hover effects */
+.bg-dark-secondary {
+  background-color: var(--color-dark-secondary);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.bg-light-secondary {
+  background-color: var(--color-light-secondary);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.bg-dark-accent {
+  background-color: var(--color-dark-accent);
+  transition: all 0.3s ease;
+}
+
+.bg-light-accent {
+  background-color: var(--color-light-accent);
+  transition: all 0.3s ease;
 }
 
 html {
@@ -46,6 +79,8 @@ html {
 
 body {
   transition: background-color 0.5s ease-in-out, color 0.4s ease;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
 }
 
 /* Fluent Mica background effect */
@@ -69,6 +104,7 @@ body {
   backdrop-filter: blur(24px);
   border: 1px solid rgba(255, 255, 255, 0.05);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
 }
 
 /* Fluent glass effect - Light mode */
@@ -77,6 +113,7 @@ body {
   backdrop-filter: blur(24px);
   border: 1px solid rgba(0, 0, 0, 0.05);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
 }
 
 /* Fluent card effect - Dark mode */
@@ -85,6 +122,8 @@ body {
   backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Fluent card effect - Light mode */
@@ -93,6 +132,8 @@ body {
   backdrop-filter: blur(16px);
   border: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Fluent button styles */
@@ -100,23 +141,26 @@ body {
   background: var(--color-xbox-button);
   color: white;
   border: none;
-  border-radius: 6px;
-  padding: 12px 20px;
+  border-radius: 12px;
+  padding: 14px 24px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
   position: relative;
   overflow: hidden;
+  font-size: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .btn-xbox:hover {
   background: var(--color-xbox-hover);
   transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(16, 124, 16, 0.3);
+  box-shadow: 0 8px 16px rgba(16, 124, 16, 0.3);
 }
 
 .btn-xbox:active {
   transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .btn-xbox::after {
@@ -135,14 +179,23 @@ body {
   left: 120%;
 }
 
+.btn-xbox:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 /* Fluent input styles - Dark mode */
 .input-fluent {
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 6px;
-  padding: 12px 16px;
+  border-radius: 12px;
+  padding: 14px 16px;
   color: white;
   transition: all 0.2s ease;
+  font-size: 1rem;
+  width: 100%;
 }
 
 .dark .input-fluent {
@@ -160,7 +213,19 @@ body {
 .input-fluent:focus {
   outline: none;
   border-color: var(--color-xbox-green);
-  box-shadow: 0 0 0 2px rgba(119, 185, 0, 0.3);
+  box-shadow: 0 0 0 3px rgba(119, 185, 0, 0.3);
+}
+
+.input-fluent::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.dark .input-fluent::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.light .input-fluent::placeholder {
+  color: rgba(0, 0, 0, 0.5);
 }
 
 /* Fluent text styles */
@@ -178,22 +243,23 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  font-weight: 700;
 }
 
 /* Custom scrollbar - Fluent style */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 12px;
 }
 
 ::-webkit-scrollbar-track {
   background: rgba(255, 255, 255, 0.05);
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
   background: var(--color-xbox-green);
-  border-radius: 5px;
-  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  border: 3px solid rgba(255, 255, 255, 0.1);
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -206,7 +272,7 @@ body {
 
 .light ::-webkit-scrollbar-thumb {
   background: var(--color-xbox-green);
-  border: 2px solid rgba(0, 0, 0, 0.05);
+  border: 3px solid rgba(0, 0, 0, 0.05);
 }
 
 .light ::-webkit-scrollbar-thumb:hover {
@@ -217,4 +283,185 @@ body {
 .focus-indicator:focus {
   outline: 2px solid var(--color-xbox-green);
   outline-offset: 2px;
+}
+
+/* Loading spinner */
+.spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid rgba(119, 185, 0, 0.2);
+  border-top: 3px solid var(--color-xbox-green);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Pulse animation for loading states */
+.pulse {
+  animation: var(--animate-pulse);
+}
+
+/* Better typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+/* Improved card hover effect */
+.card-bg-dark:hover,
+.card-bg-light:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Smooth transitions for theme changes */
+* {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Better focus styles for accessibility */
+.focus-ring {
+  outline: 2px solid var(--color-xbox-green) !important;
+  outline-offset: 2px !important;
+}
+
+/* Improved button variants */
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-fluent-neutral-dark);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.light .btn-secondary {
+  background: rgba(0, 0, 0, 0.05);
+  color: #333;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.light .btn-secondary:hover {
+  background: rgba(0, 0, 0, 0.1);
+  color: #000;
+}
+
+/* Tag styles */
+.tag {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  background: rgba(119, 185, 0, 0.15);
+  color: var(--color-xbox-green);
+  border: 1px solid rgba(119, 185, 0, 0.2);
+}
+
+/* Badge styles */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  min-width: 20px;
+  height: 20px;
+}
+
+.badge-primary {
+  background: var(--color-xbox-green);
+  color: white;
+}
+
+.badge-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-fluent-neutral-dark);
+}
+
+.light .badge-secondary {
+  background: rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+/* Improved link styles */
+.link-style {
+  color: var(--color-xbox-green);
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 2px;
+  transition: all 0.2s ease;
+}
+
+.link-style::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--color-xbox-green);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.link-style:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Notification styles */
+.notification {
+  padding: 16px 20px;
+  border-radius: 12px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.notification-success {
+  background: rgba(46, 204, 113, 0.15);
+  border: 1px solid rgba(46, 204, 113, 0.3);
+  color: #2ecc71;
+}
+
+.notification-error {
+  background: rgba(231, 76, 60, 0.15);
+  border: 1px solid rgba(231, 76, 60, 0.3);
+  color: #e74c3c;
+}
+
+.notification-warning {
+  background: rgba(241, 196, 15, 0.15);
+  border: 1px solid rgba(241, 196, 15, 0.3);
+  color: #f1c40f;
+}
+
+.notification-info {
+  background: rgba(52, 152, 219, 0.15);
+  border: 1px solid rgba(52, 152, 219, 0.3);
+  color: #3498db;
 }
