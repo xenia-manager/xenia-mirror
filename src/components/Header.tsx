@@ -8,12 +8,12 @@ export default function Header() {
 
   return (
     <header
-      className={`flex justify-between items-center px-4 md:px-8 py-4 
+      className={`flex justify-between items-center px-4 md:px-8 py-4
                   sticky top-0 z-50 shadow-lg
                   ${
                     theme === "dark"
-                      ? "glass-bg-dark glass-border-dark"
-                      : "glass-bg-light glass-border-light"
+                      ? "card-bg-dark"
+                      : "card-bg-light"
                   }`}
     >
       <div className="flex items-center gap-4">
@@ -33,12 +33,12 @@ export default function Header() {
         onClick={toggleTheme}
         aria-label="Toggle Theme"
         className={`p-3 rounded-xl cursor-pointer text-xl
-                   transition-all duration-300 hover:-translate-y-0.5 
-                   hover:shadow-lg
+                   transition-all duration-300 hover:-translate-y-0.5
+                   hover:shadow-lg focus-indicator
                    ${
                      theme === "dark"
-                       ? "glass-bg-dark glass-border-dark"
-                       : "glass-bg-light glass-border-light"
+                       ? "card-bg-dark"
+                       : "card-bg-light"
                    }`}
       >
         <span>{theme === "dark" ? "🌙" : "☀️"}</span>

@@ -165,11 +165,11 @@ export default function ReleasesList() {
         className={`text-center rounded-2xl p-8 shadow-lg
                     ${
                       theme === "dark"
-                        ? "glass-bg-dark glass-border-dark"
-                        : "glass-bg-light glass-border-light"
+                        ? "card-bg-dark"
+                        : "card-bg-light"
                     }`}
       >
-        <div className="text-gray-400 text-lg">Loading releases...</div>
+        <div className={`${theme === "dark" ? "text-fluent-neutral" : "text-gray-600"} text-lg`}>Loading releases...</div>
       </div>
     );
   }
@@ -180,8 +180,8 @@ export default function ReleasesList() {
         className={`text-center rounded-2xl p-8 shadow-lg
                     ${
                       theme === "dark"
-                        ? "glass-bg-dark glass-border-dark"
-                        : "glass-bg-light glass-border-light"
+                        ? "card-bg-dark"
+                        : "card-bg-light"
                     }`}
       >
         <div className="text-red-500 text-lg">Error: {error}</div>
@@ -205,13 +205,13 @@ export default function ReleasesList() {
         className={`rounded-2xl p-6 shadow-lg
                     ${
                       theme === "dark"
-                        ? "glass-bg-dark glass-border-dark"
-                        : "glass-bg-light glass-border-light"
+                        ? "card-bg-dark"
+                        : "card-bg-light"
                     }`}
       >
         <h2
           className={`text-xl font-semibold mb-6 ${
-            theme === "dark" ? "text-white" : "text-gray-900"
+            theme === "dark" ? "text-fluent-neutral-dark" : "text-gray-900"
           }`}
         >
           Latest Builds
@@ -219,7 +219,7 @@ export default function ReleasesList() {
 
         <div className="flex flex-col gap-4">
           {filteredReleases.length === 0 ? (
-            <p className="text-gray-500 text-center py-8">No results found.</p>
+            <p className={`${theme === "dark" ? "text-fluent-neutral" : "text-gray-500"} text-center py-8`}>No results found.</p>
           ) : (
             <>
               {displayedReleases.map((release, index) => {
@@ -241,7 +241,7 @@ export default function ReleasesList() {
               )}
 
               {!hasMore && displayedReleases.length > 0 && (
-                <p className="text-center text-gray-500 py-4">No more releases!</p>
+                <p className={`${theme === "dark" ? "text-fluent-neutral" : "text-gray-500"} text-center py-4`}>No more releases!</p>
               )}
             </>
           )}

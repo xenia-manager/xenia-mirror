@@ -28,6 +28,11 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
       document.documentElement.classList.remove("dark", "light");
       document.documentElement.classList.add(theme);
       localStorage.setItem("theme", theme);
+
+      // Add Xbox/Fluent theme class to body for consistent styling
+      document.body.className = theme === "dark"
+        ? "min-h-screen bg-dark-primary text-fluent-neutral-dark transition-colors duration-500"
+        : "min-h-screen bg-light-primary text-gray-900 transition-colors duration-500";
     }
   }, [theme, mounted]);
 
@@ -39,7 +44,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     return (
       <div className="min-h-screen bg-dark-primary">
         <div className="flex items-center justify-center min-h-screen">
-          <div className="text-white">Loading...</div>
+          <div className="text-fluent-neutral-dark">Loading...</div>
         </div>
       </div>
     );

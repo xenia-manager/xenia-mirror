@@ -23,26 +23,18 @@ export default function FilterBar({
 }: FilterBarProps) {
   const { theme } = useTheme();
 
-  const inputClasses = `px-3 py-2 rounded-lg transition-all duration-200
-    focus:outline-none focus:ring-2 focus:ring-xbox-green
-    ${
-      theme === "dark"
-        ? "bg-dark-secondary border border-white/10 text-white placeholder-gray-500"
-        : "bg-white border border-gray-300 text-gray-900 placeholder-gray-400"
-    }`;
-
   return (
     <section
       className={`mb-8 rounded-2xl p-6 shadow-lg
                   ${
                     theme === "dark"
-                      ? "glass-bg-dark glass-border-dark"
-                      : "glass-bg-light glass-border-light"
+                      ? "card-bg-dark"
+                      : "card-bg-light"
                   }`}
     >
       <h2
         className={`text-xl font-semibold mb-4 ${
-          theme === "dark" ? "text-white" : "text-gray-900"
+          theme === "dark" ? "text-fluent-neutral-dark" : "text-gray-900"
         }`}
       >
         🔎 Search & Filter
@@ -54,27 +46,27 @@ export default function FilterBar({
           placeholder="Search by tag or title..."
           value={searchValue}
           onChange={(e) => onSearchChange(e.target.value)}
-          className={`${inputClasses} flex-1 min-w-[200px]`}
+          className={`input-fluent rounded-lg transition-all duration-200
+                     flex-1 min-w-[200px]`}
         />
 
         <input
           type="date"
           value={fromDate}
           onChange={(e) => onFromDateChange(e.target.value)}
-          className={inputClasses}
+          className={`input-fluent rounded-lg transition-all duration-200`}
         />
 
         <input
           type="date"
           value={toDate}
           onChange={(e) => onToDateChange(e.target.value)}
-          className={inputClasses}
+          className={`input-fluent rounded-lg transition-all duration-200`}
         />
 
         <button
           onClick={onClear}
-          className="bg-xbox-button text-white font-semibold rounded-lg px-4 py-2 
-                     transition-all duration-200 hover:bg-xbox-hover hover:-translate-y-0.5"
+          className="btn-xbox rounded-lg transition-all duration-200"
         >
           Clear
         </button>
