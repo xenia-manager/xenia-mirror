@@ -32,7 +32,7 @@ export default function ReleasesList() {
     async function fetchReleases() {
       try {
         const response = await fetch(
-          "https://raw.githubusercontent.com/xenia-manager/xenia-mirror/refs/heads/main/data/canary_releases.json"
+          "https://raw.githubusercontent.com/xenia-manager/database/refs/heads/main/data/xenia-releases/canary.json"
         );
         if (!response.ok) throw new Error("Failed to fetch releases");
         const data = await response.json();
