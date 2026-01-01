@@ -1,22 +1,32 @@
 "use client";
 
-import { useEffect, useState, useMemo } from "react";
+import { useEffect, useState, useMemo, useCallback, useRef } from "react";
 import { Release } from "@/lib/types";
 import { useTheme } from "./ThemeProvider";
 import ReleaseCard from "./ReleaseCard";
 import FilterBar from "./FilterBar";
 
+const BATCH_SIZE = 20;
+
 export default function ReleasesList() {
   const { theme } = useTheme();
-  const [releases, setReleases] = useState<Release[]>([]);
+  const [allReleases, setAllReleases] = useState<Release[]>([]);
+  const [displayedReleases, setDisplayedReleases] = useState<Release[]>([]);
   const [loading, setLoading] = useState(true);
+  const [loadingMore, setLoadingMore] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [hasMore, setHasMore] = useState(true);
 
   // Filter states
   const [searchValue, setSearchValue] = useState("");
   const [fromDate, setFromDate] = useState("");
   const [toDate, setToDate] = useState("");
 
+  // Refs for infinite scrolling
+  const observer = useRef<IntersectionObserver | null>(null);
+  const lastReleaseRef = useRef<HTMLDivElement>(null);
+
+  // Fetch all releases initially
   useEffect(() => {
     async function fetchReleases() {
       try {
@@ -25,7 +35,10 @@ export default function ReleasesList() {
         );
         if (!response.ok) throw new Error("Failed to fetch releases");
         const data = await response.json();
-        setReleases(data);
+        setAllReleases(data);
+        // Initially display the first batch
+        setDisplayedReleases(data.slice(0, BATCH_SIZE));
+        setHasMore(data.length > BATCH_SIZE);
       } catch (err) {
         setError(err instanceof Error ? err.message : "An error occurred");
       } finally {
@@ -36,8 +49,9 @@ export default function ReleasesList() {
     fetchReleases();
   }, []);
 
+  // Filter releases based on search and date filters
   const filteredReleases = useMemo(() => {
-    return releases.filter((rel) => {
+    return allReleases.filter((rel) => {
       // Search filter
       const searchLower = searchValue.toLowerCase();
       const inTitle = rel.changelog.title.toLowerCase().includes(searchLower);
@@ -59,7 +73,56 @@ export default function ReleasesList() {
 
       return matchesSearch && matchesDate;
     });
-  }, [releases, searchValue, fromDate, toDate]);
+  }, [allReleases, searchValue, fromDate, toDate]);
+
+  // Apply filters and pagination to displayed releases
+  useEffect(() => {
+    // Reset to first batch when filters change
+    setDisplayedReleases(filteredReleases.slice(0, BATCH_SIZE));
+    setHasMore(filteredReleases.length > BATCH_SIZE);
+  }, [filteredReleases]);
+
+  // Load more releases
+  const loadMoreReleases = useCallback(() => {
+    if (loadingMore || !hasMore) return;
+
+    setLoadingMore(true);
+    setTimeout(() => {
+      const currentLength = displayedReleases.length;
+      const nextReleases = filteredReleases.slice(currentLength, currentLength + BATCH_SIZE);
+      setDisplayedReleases(prev => [...prev, ...nextReleases]);
+      setHasMore(currentLength + nextReleases.length < filteredReleases.length);
+      setLoadingMore(false);
+    }, 300); // Simulate network delay
+  }, [displayedReleases.length, filteredReleases, hasMore, loadingMore]);
+
+  // Set up intersection observer for infinite scrolling
+  useEffect(() => {
+    if (loading || loadingMore) return;
+
+    // Clean up previous observer
+    if (observer.current) {
+      observer.current.disconnect();
+    }
+
+    // Set up new observer
+    observer.current = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting && hasMore && !loadingMore) {
+        loadMoreReleases();
+      }
+    });
+
+    // Observe the last release element
+    if (lastReleaseRef.current) {
+      observer.current.observe(lastReleaseRef.current);
+    }
+
+    return () => {
+      if (observer.current) {
+        observer.current.disconnect();
+      }
+    };
+  }, [hasMore, loadingMore, loadMoreReleases]);
 
   const handleClear = () => {
     setSearchValue("");
@@ -129,9 +192,29 @@ export default function ReleasesList() {
           {filteredReleases.length === 0 ? (
             <p className="text-gray-500 text-center py-8">No results found.</p>
           ) : (
-            filteredReleases.map((release) => (
-              <ReleaseCard key={release.tag_name} release={release} />
-            ))
+            <>
+              {displayedReleases.map((release, index) => {
+                // Add ref to the last element for infinite scrolling
+                if (index === displayedReleases.length - 1) {
+                  return (
+                    <div key={release.tag_name} ref={lastReleaseRef}>
+                      <ReleaseCard release={release} />
+                    </div>
+                  );
+                }
+                return <ReleaseCard key={release.tag_name} release={release} />;
+              })}
+
+              {loadingMore && (
+                <div className="text-center py-4">
+                  <div className="inline-block animate-spin rounded-full h-6 w-6 border-t-2 border-b-2 border-xbox-green"></div>
+                </div>
+              )}
+
+              {!hasMore && displayedReleases.length > 0 && (
+                <p className="text-center text-gray-500 py-4">No more releases!</p>
+              )}
+            </>
           )}
         </div>
       </section>
