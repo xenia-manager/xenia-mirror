@@ -63,7 +63,7 @@ export default function ReleaseCard({ release }: ReleaseCardProps) {
       <div className="flex justify-between items-center mb-5 flex-wrap gap-2">
         <div className="text-xbox-green font-medium">
           <a
-            href={`https://github.com/xenia-canary/xenia-canary/commit/${release.tag_name}`}
+            href={release.commit_url}
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-xbox-hover hover:underline transition-colors link-style"
@@ -76,7 +76,7 @@ export default function ReleaseCard({ release }: ReleaseCardProps) {
                              : "bg-light-accent text-gray-900"
                          }`}
             >
-              {release.tag_name}
+              {release.target_commitish}
             </code>
           </a>
         </div>

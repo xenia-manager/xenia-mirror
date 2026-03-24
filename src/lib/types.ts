@@ -10,8 +10,10 @@ export interface Changelog {
 
 export interface Release {
   tag_name: string;
+  target_commitish: string;
   published_at: string;
   url: string;
+  commit_url: string;
   changelog: Changelog;
   assets: Asset[];
 }

@@ -56,8 +56,8 @@ export default function ReleasesList() {
       // Search filter
       const searchLower = searchValue.toLowerCase();
       const inTitle = rel.changelog.title.toLowerCase().includes(searchLower);
-      const inTag = rel.tag_name.toLowerCase().includes(searchLower);
-      const matchesSearch = searchValue === "" || inTitle || inTag;
+      const inCommit = rel.target_commitish.toLowerCase().includes(searchLower);
+      const matchesSearch = searchValue === "" || inTitle || inCommit;
 
       // Date filter
       let matchesDate = true;
