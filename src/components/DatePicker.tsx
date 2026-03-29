@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { useTheme } from "./ThemeProvider";
 import CustomSelect from "./CustomSelect";
 
 interface DatePickerProps {
@@ -17,7 +16,6 @@ export default function DatePicker({
   label,
   earliestDate,
 }: DatePickerProps) {
-  const { theme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
   const [tempDate, setTempDate] = useState(value);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -100,16 +98,14 @@ export default function DatePicker({
 
   return (
     <div className="relative" ref={dropdownRef}>
-      <label
-        className={`block text-sm font-medium mb-2 ${theme === "dark" ? "text-fluent-neutral" : "text-gray-600"}`}
-      >
+      <label className="block text-sm font-medium mb-2 text-fluent-secondary">
         {label}
       </label>
 
       {/* Display Input */}
       <div
         onClick={() => setIsOpen(!isOpen)}
-        className={`input-fluent cursor-pointer flex items-center justify-between transition-all duration-200`}
+        className="input-fluent cursor-pointer flex items-center justify-between transition-all duration-200"
       >
         <span className={value ? "" : "opacity-50"}>
           {value
@@ -120,12 +116,7 @@ export default function DatePicker({
               })
             : "Select date..."}
         </span>
-        <svg
-          className={`w-5 h-5 ${theme === "dark" ? "text-fluent-neutral-dark" : "text-gray-600"}`}
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
+        <svg className="w-5 h-5 text-fluent-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -137,14 +128,7 @@ export default function DatePicker({
 
       {/* Dropdown */}
       {isOpen && (
-        <div
-          className={`absolute z-50 mt-2 p-4 rounded-xl shadow-2xl min-w-[320px]
-                      ${
-                        theme === "dark"
-                          ? "mica-surface-dark"
-                          : "mica-surface-light"
-                      }`}
-        >
+        <div className="absolute z-50 mt-2 p-4 rounded-xl shadow-2xl min-w-[320px] mica-surface backdrop-blur-xl">
           <div className="flex gap-3 mb-4">
             <div className="flex-1">
               <CustomSelect
@@ -191,12 +175,7 @@ export default function DatePicker({
             </button>
             <button
               onClick={handleClear}
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200
-                          ${
-                            theme === "dark"
-                              ? "bg-dark-accent text-fluent-neutral-dark hover:bg-dark-accent/80"
-                              : "bg-light-accent text-gray-700 hover:bg-light-accent/80"
-                          }`}
+              className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 bg-[var(--bg-accent)] text-fluent-primary hover:bg-[var(--bg-accent)]/80"
             >
               Clear
             </button>

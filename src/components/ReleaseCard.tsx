@@ -1,23 +1,27 @@
 "use client";
 
 import { Release } from "@/lib/types";
-import { useTheme } from "./ThemeProvider";
 
 interface ReleaseCardProps {
   release: Release;
 }
 
 export default function ReleaseCard({ release }: ReleaseCardProps) {
-  const { theme } = useTheme();
-
-  const dateFormatted = new Date(release.published_at).toLocaleDateString(
-    "en-US",
-    {
-      year: "numeric",
-      month: "short",
-      day: "numeric",
-    },
-  );
+  const dateFormatted = (() => {
+    try {
+      const date = new Date(release.published_at);
+      if (isNaN(date.getTime())) {
+        return "Unknown date";
+      }
+      return date.toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+      });
+    } catch {
+      return "Unknown date";
+    }
+  })();
 
   const getAssetLabel = (name: string) => {
     const lower = name.toLowerCase();
@@ -27,9 +31,9 @@ export default function ReleaseCard({ release }: ReleaseCardProps) {
 
   return (
     <div
-      className={`rounded-xl p-6 shadow-lg
+      className="rounded-xl p-6 shadow-lg
                   transition-all duration-300 hover:-translate-y-1 hover:shadow-xl
-                  ${theme === "dark" ? "card-bg-dark" : "card-bg-light"}`}
+                  card-bg"
     >
       {/* Title */}
       <div className="text-lg font-semibold mb-3">
@@ -37,8 +41,7 @@ export default function ReleaseCard({ release }: ReleaseCardProps) {
           href={release.url}
           target="_blank"
           rel="noopener noreferrer"
-          className={`hover:text-xbox-hover hover:underline transition-colors link-style
-                     ${theme === "dark" ? "text-fluent-neutral-dark" : "text-gray-900"}`}
+          className="hover:text-xbox-hover hover:underline transition-colors link-style text-fluent-primary"
         >
           {release.changelog.title || release.tag_name}
         </a>
@@ -46,13 +49,7 @@ export default function ReleaseCard({ release }: ReleaseCardProps) {
 
       {/* Changes */}
       {release.changelog.changes && (
-        <div
-          className={`text-sm mb-4 whitespace-pre-wrap p-3 rounded-lg ${
-            theme === "dark"
-              ? "bg-dark-accent text-fluent-neutral"
-              : "bg-light-accent text-gray-600"
-          }`}
-        >
+        <div className="text-sm mb-4 whitespace-pre-wrap p-3 rounded-lg bg-[var(--bg-accent)] text-fluent-secondary">
           {release.changelog.changes}
         </div>
       )}
@@ -66,26 +63,12 @@ export default function ReleaseCard({ release }: ReleaseCardProps) {
             rel="noopener noreferrer"
             className="hover:text-xbox-hover hover:underline transition-colors link-style"
           >
-            <code
-              className={`px-3 py-1 rounded-md text-sm font-mono
-                         ${
-                           theme === "dark"
-                             ? "bg-dark-accent text-fluent-neutral-dark"
-                             : "bg-light-accent text-gray-900"
-                         }`}
-            >
+            <code className="px-3 py-1 rounded-md text-sm font-mono bg-[var(--bg-accent)] text-fluent-primary">
               {release.target_commitish}
             </code>
           </a>
         </div>
-        <div
-          className={`text-sm flex items-center gap-2 px-3 py-1.5 rounded-lg
-                        ${
-                          theme === "dark"
-                            ? "mica-surface-dark text-fluent-neutral-dark"
-                            : "mica-surface-light text-gray-700"
-                        }`}
-        >
+        <div className="text-sm flex items-center gap-2 px-3 py-1.5 rounded-lg mica-surface text-fluent-primary">
           <span className="text-xbox-green">📅</span>
           <span className="font-medium">{dateFormatted}</span>
         </div>

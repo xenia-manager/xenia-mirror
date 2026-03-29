@@ -1,6 +1,5 @@
 "use client";
 
-import { useTheme } from "./ThemeProvider";
 import DatePicker from "./DatePicker";
 
 interface FilterBarProps {
@@ -28,30 +27,15 @@ export default function FilterBar({
   onSortChange,
   onClear,
 }: FilterBarProps) {
-  const { theme } = useTheme();
-
   return (
-    <section
-      className={`mb-8 rounded-2xl p-6 shadow-lg
-                  ${
-                    theme === "dark"
-                      ? "bg-dark-secondary"
-                      : "bg-light-secondary"
-                  }`}
-    >
-      <h2
-        className={`text-xl font-semibold mb-4 ${
-          theme === "dark" ? "text-fluent-neutral-dark" : "text-gray-900"
-        }`}
-      >
+    <section className="mb-8 rounded-2xl p-6 shadow-lg bg-[var(--bg-secondary)]">
+      <h2 className="text-xl font-semibold mb-4 text-fluent-primary">
         Search & Filter
       </h2>
 
       <div className="flex flex-wrap gap-4 items-end">
         <div className="flex-1 min-w-[200px]">
-          <label
-            className={`block text-sm font-medium mb-2 ${theme === "dark" ? "text-fluent-neutral" : "text-gray-600"}`}
-          >
+          <label className="block text-sm font-medium mb-2 text-fluent-secondary">
             Search
           </label>
           <input
@@ -59,7 +43,7 @@ export default function FilterBar({
             placeholder="Search by tag or title..."
             value={searchValue}
             onChange={(e) => onSearchChange(e.target.value)}
-            className={`input-fluent transition-all duration-200`}
+            className="input-fluent transition-all duration-200"
           />
         </div>
 
@@ -78,16 +62,14 @@ export default function FilterBar({
         />
 
         <div>
-          <label
-            className={`block text-sm font-medium mb-2 ${theme === "dark" ? "text-fluent-neutral" : "text-gray-600"}`}
-          >
+          <label className="block text-sm font-medium mb-2 text-fluent-secondary">
             Sort By
           </label>
           <button
             onClick={() =>
               onSortChange(sortOption === "newest" ? "oldest" : "newest")
             }
-            className={`input-fluent transition-all duration-200 flex items-center justify-center gap-2`}
+            className="input-fluent transition-all duration-200 flex items-center justify-center gap-2"
             aria-label={`Sort by ${sortOption === "newest" ? "oldest" : "newest"}`}
           >
             {sortOption === "newest" ? "↓" : "↑"}

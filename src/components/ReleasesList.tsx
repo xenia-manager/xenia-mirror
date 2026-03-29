@@ -2,14 +2,12 @@
 
 import { useEffect, useState, useMemo, useCallback, useRef } from "react";
 import { Release } from "@/lib/types";
-import { useTheme } from "./ThemeProvider";
 import ReleaseCard from "./ReleaseCard";
 import FilterBar from "./FilterBar";
 
 const BATCH_SIZE = 20;
 
 export default function ReleasesList() {
-  const { theme } = useTheme();
   const [allReleases, setAllReleases] = useState<Release[]>([]);
   const [displayedReleases, setDisplayedReleases] = useState<Release[]>([]);
   const [loading, setLoading] = useState(true);
@@ -53,11 +51,14 @@ export default function ReleasesList() {
 
         // Find the earliest release date
         if (data.length > 0) {
-          const dates = data.map((r: Release) =>
-            new Date(r.published_at).getTime(),
-          );
-          const earliest = new Date(Math.min(...dates));
-          setEarliestDate(earliest.toISOString().split("T")[0]);
+          const dates = data
+            .map((r: Release) => new Date(r.published_at).getTime())
+            .filter((d: number) => !isNaN(d));
+
+          if (dates.length > 0) {
+            const earliest = new Date(Math.min(...dates));
+            setEarliestDate(earliest.toISOString().split("T")[0]);
+          }
         }
       } catch (err) {
         setError(err instanceof Error ? err.message : "An error occurred");
@@ -72,6 +73,11 @@ export default function ReleasesList() {
   // Filter releases based on search and date filters
   const filteredReleases = useMemo(() => {
     return allReleases.filter((rel) => {
+      // Skip invalid releases
+      if (!rel.changelog || !rel.changelog.title) {
+        return false;
+      }
+
       // Search filter
       const searchLower = searchValue.toLowerCase();
       const inTitle = rel.changelog.title.toLowerCase().includes(searchLower);
@@ -134,6 +140,11 @@ export default function ReleasesList() {
     return [...filteredReleases].sort((a, b) => {
       const dateA = new Date(a.published_at).getTime();
       const dateB = new Date(b.published_at).getTime();
+
+      // Handle invalid dates
+      if (isNaN(dateA) || isNaN(dateB)) {
+        return 0;
+      }
 
       if (sortOption === "newest") {
         return dateB - dateA; // Newest first
@@ -213,19 +224,10 @@ export default function ReleasesList() {
 
   if (loading) {
     return (
-      <div
-        className={`text-center rounded-2xl p-12 shadow-lg
-                    ${
-                      theme === "dark"
-                        ? "bg-dark-secondary"
-                        : "bg-light-secondary"
-                    }`}
-      >
+      <div className="text-center rounded-2xl p-12 shadow-lg mica-card">
         <div className="flex flex-col items-center justify-center">
           <div className="spinner mb-4"></div>
-          <div
-            className={`${theme === "dark" ? "text-fluent-neutral" : "text-gray-600"} text-lg`}
-          >
+          <div className="text-fluent-secondary text-lg">
             Loading releases...
           </div>
         </div>
@@ -235,14 +237,7 @@ export default function ReleasesList() {
 
   if (error) {
     return (
-      <div
-        className={`rounded-2xl p-8 shadow-lg
-                    ${
-                      theme === "dark"
-                        ? "bg-dark-secondary"
-                        : "bg-light-secondary"
-                    }`}
-      >
+      <div className="rounded-2xl p-8 shadow-lg mica-card">
         <div className="notification notification-error">
           <span className="text-xl">⚠️</span>
           <div>
@@ -269,25 +264,12 @@ export default function ReleasesList() {
         onClear={handleClear}
       />
 
-      <section
-        className={`rounded-2xl p-6 shadow-lg
-                    ${
-                      theme === "dark"
-                        ? "bg-dark-secondary"
-                        : "bg-light-secondary"
-                    }`}
-      >
+      <section className="rounded-2xl p-6 shadow-lg bg-[var(--bg-secondary)]">
         <div className="flex justify-between items-center mb-6">
-          <h2
-            className={`text-xl font-semibold ${
-              theme === "dark" ? "text-fluent-neutral-dark" : "text-gray-900"
-            }`}
-          >
+          <h2 className="text-xl font-semibold text-fluent-primary">
             Releases
           </h2>
-          <div
-            className={`text-sm ${theme === "dark" ? "text-fluent-neutral" : "text-gray-500"}`}
-          >
+          <div className="text-sm text-fluent-secondary">
             {sortedReleases.length}{" "}
             {sortedReleases.length === 1 ? "release" : "releases"} found
           </div>
@@ -297,14 +279,10 @@ export default function ReleasesList() {
           {sortedReleases.length === 0 ? (
             <div className="text-center py-12">
               <div className="text-5xl mb-4">🔍</div>
-              <p
-                className={`${theme === "dark" ? "text-fluent-neutral" : "text-gray-500"} text-lg mb-2`}
-              >
+              <p className="text-fluent-secondary text-lg mb-2">
                 No results found
               </p>
-              <p
-                className={`${theme === "dark" ? "text-fluent-neutral" : "text-gray-500"}`}
-              >
+              <p className="text-fluent-secondary">
                 Try adjusting your search or filter criteria
               </p>
             </div>
@@ -331,10 +309,8 @@ export default function ReleasesList() {
               {!hasMore && displayedReleases.length > 0 && (
                 <div className="text-center py-6">
                   <div className="inline-flex items-center gap-2 text-lg font-medium">
-                    <span
-                      className={`${theme === "dark" ? "text-fluent-neutral" : "text-gray-500"}`}
-                    >
-                      You've reached the end!
+                    <span className="text-fluent-secondary">
+                      You&apos;ve reached the end!
                     </span>
                   </div>
                 </div>

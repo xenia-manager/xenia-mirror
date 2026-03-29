@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { useTheme } from "./ThemeProvider";
 
 interface CustomSelectProps {
   value: string;
@@ -18,7 +17,6 @@ export default function CustomSelect({
   placeholder,
   label,
 }: CustomSelectProps) {
-  const { theme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -46,9 +44,7 @@ export default function CustomSelect({
 
   return (
     <div className="relative" ref={dropdownRef}>
-      <label
-        className={`block text-xs mb-1 ${theme === "dark" ? "text-fluent-neutral" : "text-gray-500"}`}
-      >
+      <label className="block text-xs mb-1 text-fluent-secondary">
         {label}
       </label>
 
@@ -56,20 +52,15 @@ export default function CustomSelect({
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className={`w-full px-3 py-2 rounded-lg text-sm text-left flex items-center justify-between
+        className="w-full px-3 py-2 rounded-lg text-sm text-left flex items-center justify-between
                     transition-all duration-200
-                    ${
-                      theme === "dark"
-                        ? "bg-dark-accent text-fluent-neutral-dark border border-dark-tertiary hover:bg-dark-accent/80"
-                        : "bg-light-accent text-gray-900 border border-light-tertiary hover:bg-light-accent/80"
-                    }`}
+                    bg-[var(--bg-accent)] text-fluent-primary border border-[var(--border-color)] hover:bg-[var(--bg-accent)]/80"
       >
         <span className={!value ? "opacity-50" : ""}>
           {selectedLabel || placeholder}
         </span>
         <svg
-          className={`w-4 h-4 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}
-                      ${theme === "dark" ? "text-fluent-neutral" : "text-gray-500"}`}
+          className={`w-4 h-4 transition-transform duration-200 ${isOpen ? "rotate-180" : ""} text-fluent-secondary`}
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -85,14 +76,7 @@ export default function CustomSelect({
 
       {/* Dropdown */}
       {isOpen && (
-        <div
-          className={`absolute z-50 mt-1 min-w-full max-h-60 overflow-y-auto rounded-lg shadow-2xl
-                      ${
-                        theme === "dark"
-                          ? "mica-surface-dark"
-                          : "mica-surface-light"
-                      }`}
-        >
+        <div className="absolute z-50 mt-1 min-w-full max-h-60 overflow-y-auto rounded-lg shadow-2xl mica-surface backdrop-blur-xl">
           {options.map((option) => (
             <button
               key={option.value}
@@ -105,16 +89,10 @@ export default function CustomSelect({
               className={`w-full px-3 py-2 text-left text-sm transition-colors
                           ${
                             option.disabled
-                              ? theme === "dark"
-                                ? "text-fluent-neutral opacity-50 cursor-not-allowed"
-                                : "text-gray-500 opacity-50 cursor-not-allowed"
+                              ? "text-fluent-secondary opacity-50 cursor-not-allowed"
                               : value === option.value
-                                ? theme === "dark"
-                                  ? "bg-xbox-green/20 text-xbox-green"
-                                  : "bg-xbox-green/20 text-xbox-green"
-                                : theme === "dark"
-                                  ? "text-fluent-neutral-dark hover:bg-dark-accent/50"
-                                  : "text-gray-900 hover:bg-light-accent/50"
+                                ? "bg-xbox-green/20 text-xbox-green"
+                                : "text-fluent-primary hover:bg-[var(--hover-bg)]"
                           }`}
               disabled={option.disabled}
             >
