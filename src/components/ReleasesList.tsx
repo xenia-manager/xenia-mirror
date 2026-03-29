@@ -31,11 +31,20 @@ export default function ReleasesList() {
   // Fetch all releases initially
   useEffect(() => {
     async function fetchReleases() {
+      const primaryUrl =
+        "https://xenia-manager.github.io/database/data/xenia-releases/canary.json";
+      const fallbackUrl =
+        "https://raw.githubusercontent.com/xenia-manager/database/refs/heads/main/data/xenia-releases/canary.json";
+
       try {
-        const response = await fetch(
-          "https://raw.githubusercontent.com/xenia-manager/database/refs/heads/main/data/xenia-releases/canary.json",
-        );
-        if (!response.ok) throw new Error("Failed to fetch releases");
+        let response = await fetch(primaryUrl);
+        if (!response.ok) {
+          console.warn("Primary URL failed, trying fallback...");
+          response = await fetch(fallbackUrl);
+          if (!response.ok) {
+            throw new Error("Failed to fetch releases");
+          }
+        }
         const data = await response.json();
         setAllReleases(data);
         // Initially display the first batch
