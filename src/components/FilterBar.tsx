@@ -1,16 +1,18 @@
 "use client";
 
 import { useTheme } from "./ThemeProvider";
+import DatePicker from "./DatePicker";
 
 interface FilterBarProps {
   searchValue: string;
   fromDate: string;
   toDate: string;
-  sortOption: 'newest' | 'oldest';
+  sortOption: "newest" | "oldest";
+  earliestDate: string;
   onSearchChange: (value: string) => void;
   onFromDateChange: (value: string) => void;
   onToDateChange: (value: string) => void;
-  onSortChange: (value: 'newest' | 'oldest') => void;
+  onSortChange: (value: "newest" | "oldest") => void;
   onClear: () => void;
 }
 
@@ -19,6 +21,7 @@ export default function FilterBar({
   fromDate,
   toDate,
   sortOption,
+  earliestDate,
   onSearchChange,
   onFromDateChange,
   onToDateChange,
@@ -41,12 +44,14 @@ export default function FilterBar({
           theme === "dark" ? "text-fluent-neutral-dark" : "text-gray-900"
         }`}
       >
-        🔎 Search & Filter
+        Search & Filter
       </h2>
 
       <div className="flex flex-wrap gap-4 items-end">
         <div className="flex-1 min-w-[200px]">
-          <label className={`block text-sm font-medium mb-2 ${theme === "dark" ? "text-fluent-neutral" : "text-gray-600"}`}>
+          <label
+            className={`block text-sm font-medium mb-2 ${theme === "dark" ? "text-fluent-neutral" : "text-gray-600"}`}
+          >
             Search
           </label>
           <input
@@ -58,40 +63,34 @@ export default function FilterBar({
           />
         </div>
 
-        <div>
-          <label className={`block text-sm font-medium mb-2 ${theme === "dark" ? "text-fluent-neutral" : "text-gray-600"}`}>
-            From Date
-          </label>
-          <input
-            type="date"
-            value={fromDate}
-            onChange={(e) => onFromDateChange(e.target.value)}
-            className={`input-fluent transition-all duration-200`}
-          />
-        </div>
+        <DatePicker
+          label="From Date"
+          value={fromDate}
+          onChange={onFromDateChange}
+          earliestDate={earliestDate}
+        />
+
+        <DatePicker
+          label="To Date"
+          value={toDate}
+          onChange={onToDateChange}
+          earliestDate={earliestDate}
+        />
 
         <div>
-          <label className={`block text-sm font-medium mb-2 ${theme === "dark" ? "text-fluent-neutral" : "text-gray-600"}`}>
-            To Date
-          </label>
-          <input
-            type="date"
-            value={toDate}
-            onChange={(e) => onToDateChange(e.target.value)}
-            className={`input-fluent transition-all duration-200`}
-          />
-        </div>
-
-        <div>
-          <label className={`block text-sm font-medium mb-2 ${theme === "dark" ? "text-fluent-neutral" : "text-gray-600"}`}>
+          <label
+            className={`block text-sm font-medium mb-2 ${theme === "dark" ? "text-fluent-neutral" : "text-gray-600"}`}
+          >
             Sort By
           </label>
           <button
-            onClick={() => onSortChange(sortOption === 'newest' ? 'oldest' : 'newest')}
+            onClick={() =>
+              onSortChange(sortOption === "newest" ? "oldest" : "newest")
+            }
             className={`input-fluent transition-all duration-200 flex items-center justify-center gap-2`}
-            aria-label={`Sort by ${sortOption === 'newest' ? 'oldest' : 'newest'}`}
+            aria-label={`Sort by ${sortOption === "newest" ? "oldest" : "newest"}`}
           >
-            {sortOption === 'newest' ? '↓' : '↑'}
+            {sortOption === "newest" ? "↓" : "↑"}
           </button>
         </div>
 

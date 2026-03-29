@@ -16,7 +16,7 @@ export default function ReleaseCard({ release }: ReleaseCardProps) {
       year: "numeric",
       month: "short",
       day: "numeric",
-    }
+    },
   );
 
   const getAssetLabel = (name: string) => {
@@ -29,11 +29,7 @@ export default function ReleaseCard({ release }: ReleaseCardProps) {
     <div
       className={`rounded-xl p-6 shadow-lg
                   transition-all duration-300 hover:-translate-y-1 hover:shadow-xl
-                  ${
-                    theme === "dark"
-                      ? "card-bg-dark"
-                      : "card-bg-light"
-                  }`}
+                  ${theme === "dark" ? "card-bg-dark" : "card-bg-light"}`}
     >
       {/* Title */}
       <div className="text-lg font-semibold mb-3">
@@ -50,11 +46,13 @@ export default function ReleaseCard({ release }: ReleaseCardProps) {
 
       {/* Changes */}
       {release.changelog.changes && (
-        <div className={`text-sm mb-4 whitespace-pre-wrap p-3 rounded-lg ${
-          theme === "dark"
-            ? "bg-dark-accent text-fluent-neutral"
-            : "bg-light-accent text-gray-600"
-        }`}>
+        <div
+          className={`text-sm mb-4 whitespace-pre-wrap p-3 rounded-lg ${
+            theme === "dark"
+              ? "bg-dark-accent text-fluent-neutral"
+              : "bg-light-accent text-gray-600"
+          }`}
+        >
           {release.changelog.changes}
         </div>
       )}
@@ -80,8 +78,16 @@ export default function ReleaseCard({ release }: ReleaseCardProps) {
             </code>
           </a>
         </div>
-        <div className={`${theme === "dark" ? "text-fluent-neutral" : "text-gray-500"} text-sm flex items-center gap-1`}>
-          <span>📅</span> {dateFormatted}
+        <div
+          className={`text-sm flex items-center gap-2 px-3 py-1.5 rounded-lg
+                        ${
+                          theme === "dark"
+                            ? "mica-surface-dark text-fluent-neutral-dark"
+                            : "mica-surface-light text-gray-700"
+                        }`}
+        >
+          <span className="text-xbox-green">📅</span>
+          <span className="font-medium">{dateFormatted}</span>
         </div>
       </div>
 

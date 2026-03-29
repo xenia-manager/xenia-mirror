@@ -27,12 +27,12 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     if (mounted) {
       document.documentElement.classList.remove("dark", "light");
       document.documentElement.classList.add(theme);
+      document.documentElement.style.colorScheme = theme;
       localStorage.setItem("theme", theme);
-
-      // Add Xbox/Fluent theme class to body for consistent styling
-      document.body.className = theme === "dark"
-        ? "min-h-screen bg-dark-primary text-fluent-neutral-dark transition-colors duration-500"
-        : "min-h-screen bg-light-primary text-gray-900 transition-colors duration-500";
+      document.body.className =
+        theme === "dark"
+          ? "min-h-screen bg-dark-primary text-fluent-neutral-dark"
+          : "min-h-screen bg-light-primary text-gray-900";
     }
   }, [theme, mounted]);
 

@@ -21,7 +21,8 @@ export default function ReleasesList() {
   const [searchValue, setSearchValue] = useState("");
   const [fromDate, setFromDate] = useState("");
   const [toDate, setToDate] = useState("");
-  const [sortOption, setSortOption] = useState<'newest' | 'oldest'>('newest');
+  const [sortOption, setSortOption] = useState<"newest" | "oldest">("newest");
+  const [earliestDate, setEarliestDate] = useState("");
 
   // Refs for infinite scrolling
   const observer = useRef<IntersectionObserver | null>(null);
@@ -32,7 +33,7 @@ export default function ReleasesList() {
     async function fetchReleases() {
       try {
         const response = await fetch(
-          "https://raw.githubusercontent.com/xenia-manager/database/refs/heads/main/data/xenia-releases/canary.json"
+          "https://raw.githubusercontent.com/xenia-manager/database/refs/heads/main/data/xenia-releases/canary.json",
         );
         if (!response.ok) throw new Error("Failed to fetch releases");
         const data = await response.json();
@@ -40,6 +41,15 @@ export default function ReleasesList() {
         // Initially display the first batch
         setDisplayedReleases(data.slice(0, BATCH_SIZE));
         setHasMore(data.length > BATCH_SIZE);
+
+        // Find the earliest release date
+        if (data.length > 0) {
+          const dates = data.map((r: Release) =>
+            new Date(r.published_at).getTime(),
+          );
+          const earliest = new Date(Math.min(...dates));
+          setEarliestDate(earliest.toISOString().split("T")[0]);
+        }
       } catch (err) {
         setError(err instanceof Error ? err.message : "An error occurred");
       } finally {
@@ -68,11 +78,16 @@ export default function ReleasesList() {
         releaseDate = new Date(rel.published_at);
         // Check if the date is valid
         if (isNaN(releaseDate.getTime())) {
-          console.warn(`Invalid date for release: ${rel.tag_name}, date: ${rel.published_at}`);
+          console.warn(
+            `Invalid date for release: ${rel.tag_name}, date: ${rel.published_at}`,
+          );
           return false; // Exclude releases with invalid dates
         }
       } catch (error) {
-        console.warn(`Error parsing date for release: ${rel.tag_name}, date: ${rel.published_at}`, error);
+        console.warn(
+          `Error parsing date for release: ${rel.tag_name}, date: ${rel.published_at}`,
+          error,
+        );
         return false; // Exclude releases with invalid dates
       }
 
@@ -111,7 +126,7 @@ export default function ReleasesList() {
       const dateA = new Date(a.published_at).getTime();
       const dateB = new Date(b.published_at).getTime();
 
-      if (sortOption === 'newest') {
+      if (sortOption === "newest") {
         return dateB - dateA; // Newest first
       } else {
         return dateA - dateB; // Oldest first
@@ -126,8 +141,11 @@ export default function ReleasesList() {
     setLoadingMore(true);
     setTimeout(() => {
       const currentLength = displayedReleases.length;
-      const nextReleases = sortedReleases.slice(currentLength, currentLength + BATCH_SIZE);
-      setDisplayedReleases(prev => [...prev, ...nextReleases]);
+      const nextReleases = sortedReleases.slice(
+        currentLength,
+        currentLength + BATCH_SIZE,
+      );
+      setDisplayedReleases((prev) => [...prev, ...nextReleases]);
       setHasMore(currentLength + nextReleases.length < sortedReleases.length);
       setLoadingMore(false);
     }, 300); // Simulate network delay
@@ -150,7 +168,7 @@ export default function ReleasesList() {
     }
 
     // Set up new observer
-    observer.current = new IntersectionObserver(entries => {
+    observer.current = new IntersectionObserver((entries) => {
       if (entries[0].isIntersecting && hasMore && !loadingMore) {
         loadMoreReleases();
       }
@@ -170,7 +188,13 @@ export default function ReleasesList() {
         observer.current.disconnect();
       }
     };
-  }, [hasMore, loadingMore, loadMoreReleases, displayedReleases.length, sortOption]);
+  }, [
+    hasMore,
+    loadingMore,
+    loadMoreReleases,
+    displayedReleases.length,
+    sortOption,
+  ]);
 
   const handleClear = () => {
     setSearchValue("");
@@ -190,7 +214,11 @@ export default function ReleasesList() {
       >
         <div className="flex flex-col items-center justify-center">
           <div className="spinner mb-4"></div>
-          <div className={`${theme === "dark" ? "text-fluent-neutral" : "text-gray-600"} text-lg`}>Loading releases...</div>
+          <div
+            className={`${theme === "dark" ? "text-fluent-neutral" : "text-gray-600"} text-lg`}
+          >
+            Loading releases...
+          </div>
         </div>
       </div>
     );
@@ -224,6 +252,7 @@ export default function ReleasesList() {
         fromDate={fromDate}
         toDate={toDate}
         sortOption={sortOption}
+        earliestDate={earliestDate}
         onSearchChange={setSearchValue}
         onFromDateChange={setFromDate}
         onToDateChange={setToDate}
@@ -247,8 +276,11 @@ export default function ReleasesList() {
           >
             Releases
           </h2>
-          <div className={`text-sm ${theme === "dark" ? "text-fluent-neutral" : "text-gray-500"}`}>
-            {sortedReleases.length} {sortedReleases.length === 1 ? 'release' : 'releases'} found
+          <div
+            className={`text-sm ${theme === "dark" ? "text-fluent-neutral" : "text-gray-500"}`}
+          >
+            {sortedReleases.length}{" "}
+            {sortedReleases.length === 1 ? "release" : "releases"} found
           </div>
         </div>
 
@@ -256,8 +288,16 @@ export default function ReleasesList() {
           {sortedReleases.length === 0 ? (
             <div className="text-center py-12">
               <div className="text-5xl mb-4">🔍</div>
-              <p className={`${theme === "dark" ? "text-fluent-neutral" : "text-gray-500"} text-lg mb-2`}>No results found</p>
-              <p className={`${theme === "dark" ? "text-fluent-neutral" : "text-gray-500"}`}>Try adjusting your search or filter criteria</p>
+              <p
+                className={`${theme === "dark" ? "text-fluent-neutral" : "text-gray-500"} text-lg mb-2`}
+              >
+                No results found
+              </p>
+              <p
+                className={`${theme === "dark" ? "text-fluent-neutral" : "text-gray-500"}`}
+              >
+                Try adjusting your search or filter criteria
+              </p>
             </div>
           ) : (
             <>
@@ -282,7 +322,11 @@ export default function ReleasesList() {
               {!hasMore && displayedReleases.length > 0 && (
                 <div className="text-center py-6">
                   <div className="inline-flex items-center gap-2 text-lg font-medium">
-                    <span className={`${theme === "dark" ? "text-fluent-neutral" : "text-gray-500"}`}>You've reached the end!</span>
+                    <span
+                      className={`${theme === "dark" ? "text-fluent-neutral" : "text-gray-500"}`}
+                    >
+                      You've reached the end!
+                    </span>
                   </div>
                 </div>
               )}

@@ -7,23 +7,23 @@ export default function Header() {
 
   return (
     <header
-      className={`flex justify-between items-center px-4 md:px-8 py-5
-                  sticky top-0 z-50 shadow-lg
+      className={`flex justify-between items-center px-3 md:px-6 py-3
+                  sticky top-0 z-50
                   ${
                     theme === "dark"
-                      ? "bg-dark-secondary"
-                      : "bg-light-secondary"
+                      ? "mica-surface-dark"
+                      : "mica-surface-light"
                   }`}
     >
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-3">
         <img
           src="https://avatars.githubusercontent.com/u/173571265?s=200&v=4"
           alt="Xenia Logo"
-          width={56}
-          height={56}
+          width={40}
+          height={40}
           className="rounded-xl shadow-lg"
         />
-        <h1 className="text-xl md:text-2xl font-bold gradient-text">
+        <h1 className="text-lg md:text-xl font-bold gradient-text">
           Xenia Canary Mirror
         </h1>
       </div>
@@ -31,16 +31,16 @@ export default function Header() {
       <button
         onClick={toggleTheme}
         aria-label="Toggle Theme"
-        className={`p-3 rounded-xl cursor-pointer text-xl
+        className={`p-2 rounded-lg cursor-pointer text-lg
                    transition-all duration-300
                    focus-indicator
                    ${
                      theme === "dark"
-                       ? "bg-dark-accent"
-                       : "bg-light-accent"
+                       ? "bg-dark-accent hover:bg-dark-accent/80"
+                       : "bg-light-accent hover:bg-light-accent/80"
                    }`}
       >
-        <span className="block w-6 h-6 flex items-center justify-center">
+        <span className="block w-5 h-5 flex items-center justify-center">
           {theme === "dark" ? "🌙" : "☀️"}
         </span>
       </button>

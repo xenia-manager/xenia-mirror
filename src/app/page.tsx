@@ -1,5 +1,3 @@
-import BackgroundLayers from "@/components/BackgroundLayers";
-import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import ReleasesList from "@/components/ReleasesList";
 import Footer from "@/components/Footer";
@@ -7,14 +5,10 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <>
-      <BackgroundLayers />
-      <Header />
-
-      <main className="max-w-5xl mx-auto px-4 md:px-8 py-8">
+      <div className="container mx-auto px-4 py-8 max-w-5xl">
         <HeroSection />
         <ReleasesList />
-      </main>
-
+      </div>
       <Footer />
     </>
   );

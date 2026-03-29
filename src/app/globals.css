@@ -2,16 +2,16 @@
 
 @theme {
   /* Dark theme colors */
-  --color-dark-primary: #0f0f0f; /* Background */
-  --color-dark-secondary: #1f1f1f; /* Card backgrounds */
-  --color-dark-accent: #2a2a2a; /* Accent surfaces */
-  --color-dark-tertiary: #141414; /* Deeper background */
+  --color-dark-primary: #0a0a0a; /* Background */
+  --color-dark-secondary: rgba(31, 31, 31, 0.7); /* Card backgrounds with transparency */
+  --color-dark-accent: rgba(42, 42, 42, 0.6); /* Accent surfaces */
+  --color-dark-tertiary: rgba(20, 20, 20, 0.8); /* Deeper background */
 
   /* Light theme colors */
-  --color-light-primary: #f8f8f8; /* Background */
-  --color-light-secondary: #ffffff; /* Card backgrounds */
-  --color-light-accent: #f0f0f0; /* Accent surfaces */
-  --color-light-tertiary: #eaeaea; /* Borders and dividers */
+  --color-light-primary: #f5f5f5; /* Background */
+  --color-light-secondary: rgba(255, 255, 255, 0.7); /* Card backgrounds with transparency */
+  --color-light-accent: rgba(240, 240, 240, 0.6); /* Accent surfaces */
+  --color-light-tertiary: rgba(220, 220, 220, 0.5); /* Borders and dividers */
 
   /* Xbox green palette */
   --color-xbox-green: #77b900; /* Official Xbox green */
@@ -78,24 +78,65 @@ html {
 }
 
 body {
-  transition: background-color 0.5s ease-in-out, color 0.4s ease;
+  transition: background-color 0.4s ease, color 0.4s ease;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   line-height: 1.6;
+}
+
+/* Smooth theme transitions for mica elements */
+.mica-layer,
+.mica-card-dark,
+.mica-card-light,
+.mica-surface-dark,
+.mica-surface-light,
+.input-fluent {
+  transition: all 0.4s ease;
 }
 
 /* Fluent Mica background effect */
 .mica-layer {
   background: radial-gradient(
       circle at 20% 20%,
-      rgba(119, 185, 0, 0.15) 0%,
+      rgba(119, 185, 0, 0.12) 0%,
       transparent 50%
     ),
     radial-gradient(
       circle at 80% 80%,
-      rgba(16, 124, 16, 0.12) 0%,
+      rgba(16, 124, 16, 0.1) 0%,
       transparent 50%
     ),
-    radial-gradient(circle at 40% 60%, rgba(7, 94, 7, 0.08) 0%, transparent 55%);
+    radial-gradient(circle at 40% 60%, rgba(7, 94, 7, 0.06) 0%, transparent 55%);
+  backdrop-filter: blur(80px);
+}
+
+/* Mica card effect - Dark mode */
+.mica-card-dark {
+  background: rgba(31, 31, 31, 0.6);
+  backdrop-filter: blur(40px) saturate(120%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Mica card effect - Light mode */
+.mica-card-light {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(40px) saturate(120%);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+/* Mica surface - Dark mode */
+.mica-surface-dark {
+  background: rgba(20, 20, 20, 0.5);
+  backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Mica surface - Light mode */
+.mica-surface-light {
+  background: rgba(245, 245, 245, 0.5);
+  backdrop-filter: blur(30px);
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 /* Fluent glass effect - Dark mode */
@@ -188,26 +229,28 @@ body {
 
 /* Fluent input styles - Dark mode */
 .input-fluent {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   padding: 14px 16px;
   color: white;
   transition: all 0.2s ease;
   font-size: 1rem;
   width: 100%;
+  backdrop-filter: blur(20px);
 }
 
 .dark .input-fluent {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   color: white;
 }
 
 .light .input-fluent {
-  background: rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   color: #333333;
+  backdrop-filter: blur(20px);
 }
 
 .input-fluent:focus {
@@ -226,6 +269,56 @@ body {
 
 .light .input-fluent::placeholder {
   color: rgba(0, 0, 0, 0.5);
+}
+
+/* Date picker specific styles */
+input[type="date"].input-fluent,
+input[type="date"].input-fluent::-webkit-calendar-picker-indicator {
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.dark input[type="date"].input-fluent::-webkit-calendar-picker-indicator {
+  filter: invert(1) brightness(0.8);
+}
+
+.light input[type="date"].input-fluent::-webkit-calendar-picker-indicator {
+  filter: invert(0.5);
+}
+
+input[type="date"].input-fluent::-webkit-inner-spin-button,
+input[type="date"].input-fluent::-webkit-calendar-picker-indicator {
+  opacity: 1;
+}
+
+/* Date picker dropdown styling */
+.dark ::-webkit-datetime-edit {
+  color: white;
+}
+
+.light ::-webkit-datetime-edit {
+  color: #333;
+}
+
+.dark ::-webkit-datetime-edit-year-field,
+.dark ::-webkit-datetime-edit-month-field,
+.dark ::-webkit-datetime-edit-day-field {
+  color: white;
+}
+
+.light ::-webkit-datetime-edit-year-field,
+.light ::-webkit-datetime-edit-month-field,
+.light ::-webkit-datetime-edit-day-field {
+  color: #333;
+}
+
+.dark ::-webkit-calendar-picker-indicator {
+  background-color: transparent;
+}
+
+.light ::-webkit-calendar-picker-indicator {
+  background-color: transparent;
 }
 
 /* Fluent text styles */
