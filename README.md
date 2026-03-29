@@ -17,7 +17,7 @@ A modern, responsive web application for browsing Xenia Canary builds with direc
 
 ### Prerequisites
 
-- [Node.js 18+](https://nodejs.org) or [Bun](https://bun.sh/)
+- [Bun](https://bun.sh/) (recommended) or [Node.js 18+](https://nodejs.org)
 - [Git](https://git-scm.com/)
 
 ### Installation
@@ -32,16 +32,12 @@ cd Xenia Mirror
 2. Install dependencies:
 
 ```bash
-npm install
-# or
 bun install
 ```
 
 3. Run the development server:
 
 ```bash
-npm run dev
-# or
 bun dev
 ```
 
