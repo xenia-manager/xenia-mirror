@@ -201,6 +201,19 @@ body.min-h-screen {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
 }
 
+/* Glass card effect (from Game Compatibility project) */
+.glass-card {
+  background: var(--color-dark-secondary);
+  backdrop-filter: blur(40px) saturate(120%);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+.light .glass-card {
+  background: var(--color-light-secondary);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
 /* Mica surface - uses CSS variables for theme colors */
 .mica-surface {
   backdrop-filter: blur(30px);
